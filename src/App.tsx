@@ -1,3 +1,4 @@
+import { SubstanceLexicon } from './components/SubstanceLexicon';
 import React, { useState } from 'react';
 import { 
   calculateAddictionImpact, 
