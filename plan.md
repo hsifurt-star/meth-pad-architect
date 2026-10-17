@@ -1,57 +1,51 @@
-# Substance — implementation and design plan
+# Substance — product and redesign plan
 
 ## Product direction
 
-Continue from the existing `meth-pad-architect` React/TypeScript/Vite site. Make the primary experience a multi-substance use-history calculator backed by a broad searchable substance index. Let a visitor describe distinct periods for multiple substances, then return transparent arithmetic summaries and only source-backed co-use warnings. The app must not convert user-entered history into invented addiction, brain-age, recovery, lifespan, or overdose probabilities.
+Continue the current React/TypeScript/Vite application and 373-record attributed index. The homepage becomes a compact use-history workbench, not a landing page or long explainer. Keep the detailed inputs and transparent arithmetic users liked; make optional information easy to find without forcing it onto every screen.
 
-## Calculator behavior and scientific limits
+## Calculator and evidence
 
-- Allow an optional current age and up to 12 use-period entries in one in-memory profile. Each period references a substance from the indexed dataset and records its duration, whether that pattern is ongoing, optional age at start for a past period, usual occasions per week, optional amount per occasion and its original unit, and one or more source-reported routes. A second entry for the same substance represents a changed period or pattern.
-- Calculate approximate occasions as duration in years × 365.2425/7 weeks per year × entered average occasions per week. Calculate approximate cumulative reported amount as occasions × entered average amount per occasion only when all inputs and a unit are supplied. Keep results per period and in their original units. Never add quantities across substances or periods or convert mg, g, mcg, mL, tablets, or user-labeled units.
-- Label these as user-history arithmetic, not toxicology, dependence, safe-use advice or predicted health outcomes. State that totals assume the entered average pattern remained typical for the entire period; users with changed patterns should enter separate periods. For an ongoing period, optionally derive age at start as current age minus duration; for a past period, treat entered age at start as user-provided. Missing or invalid values produce no estimate rather than a guess.
-- Let users explicitly mark which substance-period pairs overlapped. Run only the narrowly sourced interaction rules against those marked pairs. Do not let age, dose, frequency, route or duration modify a warning or create a risk multiplier.
-- Link to validated screening resources such as WHO ASSIST and NIDA TAPS with their clinical-use, substance-coverage and diagnostic limits. Do not reproduce or alter a clinical screening instrument unless its intended setting and reuse terms are verified. Screening categories are not individual outcome probabilities or diagnoses.
-- No user-entered history is transmitted or persisted. Keep it in component memory, with a visible clear-all control and privacy explanation. Do not save it to localStorage, a database, or analytics.
+- Retain multiple substance periods, current age, duration, frequency, optional amount and user-entered unit, multi-select reported routes, and explicitly marked overlapping period pairs. Keep the 12-period session cap, unit-preserving per-period math, exact-name interaction rules, and in-memory-only history.
+- Show the core fields first. Move amount, route, and past-period age context into a clearly named “More details” disclosure in each period. Put one formula note beside the results rather than repeating paragraphs in every card.
+- Add a narrow summary rail for the period/substance counts and the requested life-years question. State “Individual years of life lost: not estimable from this history.” A collapsed population-evidence note may cite the NSW opioid agonist treatment cohort’s roughly 15-year group-average life-expectancy difference, with its specific cohort/time/place and an explicit warning that it is not a personal forecast or transferable to other substances. Do not calculate or display a personal life-years estimate.
+- Keep health-outcome claims tied to the model or source that supports them. The bundled PsychonautWiki snapshot supplies names, classes, source links, and reported routes; it is not health-outcome or dose-response data. Continue to identify all unsupported combinations as “not assessed,” not safe.
+- Continue to link WHO ASSIST and NIDA TAPS without reproducing or rescoring them. Keep user data in component memory only.
 
-## Evidence and data strategy
+## Information architecture and interaction
 
-- Keep the checked-in, attributed PsychonautWiki semantic snapshot as the searchable index (currently 373 source records). It provides names, source links, class labels and reported routes; it does not provide a validated cross-substance dose-response model. Do not imply that an index entry's community metadata is clinically verified.
-- Keep dose and duration data user-entered and unsourced; do not import dose guidance, onset, duration or potency tables as calculator coefficients. Route labels remain descriptive, not ranked or recommended. Maintain the 1,3-Butanediol quarantine and update-time schema/ID checks.
-- Use WHO ASSIST and NIDA TAPS only as cited links/reference pathways unless exact intended-use and reuse conditions are satisfied. Explain that screening is not diagnosis and that TAPS performance differs by substance.
-- Every interaction finding has a source, exact match criteria and a stated gap. Where no validated model covers the requested personal estimate, say it is not estimable from this calculator rather than fabricating a number. Keep emergency guidance prominent and independent of calculations.
-
-## Stack and serving
-
-Use the current React 18 + TypeScript + Vite static application, native CSS editorial system and pinned lockfile. No managed server or database is needed. The application uses an in-memory history model and the bundled index. The developer preview listens on port 3000; `/manus-routes.json` declares the single `/` route. Keep external source links visible and browser-facing URLs relative.
+- Replace the large hero, three-number promo strip, left section rail, and separate “can/cannot” essay with a compact header and direct calculator title.
+- Put one slim, high-contrast emergency strip before the calculator; show the immediate action in the strip and keep source/treatment details available on demand.
+- Use a desktop two-zone workbench: calculator editor in the main column and a quiet, sticky summary rail. Stack the rail after the heading on mobile.
+- Keep duration and typical frequency visible on each period. Place optional amount/unit, routes, and age context behind native accessible disclosures. Show results as a restrained per-period ledger row. Keep marked co-use warnings visible and source-linked.
+- Keep the 373-record directory, search, multi-select class/route filters, route descriptions, and add-to-calculator action, but collapse the large filter arrays until requested. Consolidate citations and lengthy limitations into one closed-by-default evidence disclosure. Remove repeated explanatory copy and decorative icon clutter; do not remove citations or urgent instructions.
+- No accounts, server, database, analytics, remote fonts, decorative stock art, or persistent use-history storage. Keep the single `/` route and port 3000.
 
 ## Project structure
 
-- `src/App.tsx`: site shell, emergency-first messaging, primary calculator and navigation.
-- `src/components/UseHistoryCalculator.tsx`: multi-substance period editor, pairwise overlap selection and calculation/result cards.
-- `src/components/EmergencyPanel.tsx`: emergency signs, immediate action and clearly labeled US helpline.
-- `src/components/SubstanceDirectory.tsx`: searchable index and descriptive routes/classes.
-- `src/components/SourceNotes.tsx`: dataset attribution, calculation limits and validated-screening links.
-- `src/data/substances.json`: attributed, versioned static source snapshot.
-- `src/lib/history-calculations.ts`: pure, unit-preserving arithmetic for use periods; never a clinical probability model.
-- `src/lib/interaction-checker.ts`: small source-linked rules matched only to explicitly supported entries and co-use pairs.
-- `src/types/`: typed index, exposure-period, history and warning records.
-- `src/index.css`: responsive calculator form/result states using the existing editorial design language.
-- `scripts/`: constrained dataset refresh plus regression checks for arithmetic and interaction boundaries.
-- `docs/`: data provenance, calculator assumptions and scientific scope.
+- `src/App.tsx`: compact header, emergency-first shell, calculator/library navigation, and main workbench.
+- `src/components/UseHistoryCalculator.tsx`: period editor, progressive disclosures, calculation rows, and explicit overlap review.
+- `src/components/CalculationSummary.tsx`: period/substance counts and the population-versus-personal life-years note.
+- `src/components/EmergencyPanel.tsx`: concise first response instruction plus optional support details.
+- `src/components/SubstanceDirectory.tsx`: searchable 373-record index with collapsed multi-select filters and source detail.
+- `src/components/SourceNotes.tsx`: single evidence/method disclosure and nearby source links.
+- `src/data/substances.json`, `src/types/`, `src/lib/`, and `scripts/`: preserve attributed source snapshot, types, unit-preserving arithmetic, narrow interaction rules, updater, and regression checks.
+- `src/index.css`: replace the current spacing-heavy system with the new compact editorial workbench; keep responsive and reduced-motion behavior.
+- `docs/`: concise attribution and evidence scope notes.
 
 ## Design
 
-Three alternative directions were considered: **Swiss public-health field guide** (0.08), **warm library index cards** (0.06), and **dark laboratory terminal** (0.04). Chosen: the **Swiss public-health field guide**, a quiet editorial style that makes sources, user-provided data and uncertainty easy to distinguish while keeping urgent information highly legible.
+Three possible directions: **independent science periodical** (0.08), **library-card ledger** (0.06), and **1970s clinical form** (0.04). Chosen: the independent science periodical, with the precision of a printed field record and the informality of a small editorial desk—not a generic SaaS dashboard.
 
-- **Design Movement:** Swiss editorial information design translated into a contemporary public-health field guide.
-- **Core Principles:** The calculator is the main task; emergency guidance stays prominent; computed values show their inputs and assumptions; content works at mobile sizes without dense tables.
-- **Color Philosophy:** Warm paper and ink establish a non-alarmist reading surface. Deep pine is the signature focus/brand color. Amber distinguishes uncertainty; clear red is reserved for emergency action and never used as an ungrounded risk grade.
-- **Layout Paradigm:** Left-aligned editorial document with a narrow section index and a wide calculator work area; results sit adjacent to their input period on large screens and stack directly below it on mobile.
-- **Signature Elements:** Small numbered evidence labels; fine ruled dividers with a green section marker; compact source chips beside calculated and evidence-backed statements.
-- **Interaction Philosophy:** Multiple episodes and substances are easy to add/remove within the 12-period cap; inputs are explicit and optional when not needed; route controls are multi-select; clear-all is visible; entries are session-only; no opaque score is shown.
-- **Animation:** Minimal and functional: short opacity/height transitions only, no pulsation, simulated neural networks or alarming motion; obey `prefers-reduced-motion`.
-- **Typography System:** A legible native sans-serif (Avenir Next/Segoe UI/Arial fallbacks) for interface/body copy, paired with a restrained editorial serif (Iowan Old Style/Palatino/Georgia fallbacks) for display headings; a modest system monospace is reserved for numeric inputs/evidence metadata. Load no third-party font service.
-- **Brand Essence:** A careful, source-traced calculator for recording substance-use history without pretending to predict an individual's health outcome. Personality: calm, candid, humane.
-- **Brand Voice:** Headlines are direct and nonjudgmental; calls to action point to concrete next steps. Examples: “See what your history adds up to.” “A calculated total is not a health-risk prediction.”
-- **Wordmark & Logo:** “SUBSTANCE / FIELD NOTES” with a custom small index-mark of three uneven ruled lines and a numbered source dot; no medical cross or brain icon.
-- **Signature Brand Color:** Deep pine, used for source-linked wayfinding and the primary mark.
+- **Design Movement:** Late-20th-century independent science magazine and Swiss editorial information design, translated into a printed use-history ledger.
+- **Core Principles:** Compact over spacious; authored typography over decoration; details on demand; every number traceable to inputs or a named source.
+- **Color Philosophy:** Chalk paper and near-black ink for a tactile, quiet base. Burnt vermilion marks periods and wayfinding; muted blue-green marks evidence links. Emergency red remains reserved for immediate danger. No gradients, glows, or status colors that imply a risk score.
+- **Layout Paradigm:** A short top masthead, one strong emergency line, then an offset two-column workbench with the period editor beside a narrow results margin. No splash page, oversized hero, full-height side menu, or three-metric banner. On phones, the summary follows the title and the form becomes a single readable column.
+- **Signature Elements:** Marginal period numbers in vermilion; fine ink rules that organize data like a ledger; a small square index mark in the wordmark.
+- **Interaction Philosophy:** Fast keyboard-friendly search, short forms first, optional fields one click away, live per-period results, and overlap warnings that stay conspicuous when selected. No data persistence or score theatrics.
+- **Animation:** Nearly still: 100–140 ms color/underline changes, no entrance choreography or pulsing. Honor `prefers-reduced-motion`.
+- **Typography System:** Georgia/Palatino system serif for display and record titles; system sans for forms and body copy; system monospace only for dates, periods, and numeric readouts. No remote font requests.
+- **Brand Essence:** A careful record of substance-use history that shows its arithmetic without impersonating a clinician. Personality: candid, crafted, composed.
+- **Brand Voice:** Plain, specific, and never promotional. Example lines: “One period for each pattern.” “Years lost: not estimable from this record.”
+- **Wordmark & Logo:** “SUBSTANCE / USE LEDGER” beside a bespoke three-rule index mark with a single vermilion registration square; no brain, atom, waveform, or medical-cross cliché.
+- **Signature Brand Color:** Burnt vermilion, used sparingly for index numbers and active marks.

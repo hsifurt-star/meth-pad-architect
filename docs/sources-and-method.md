@@ -40,6 +40,13 @@ No account or server is required. Age and use history exist only in browser page
 
 The [SAMHSA National Helpline](https://www.samhsa.gov/find-help/national-helpline) is a U.S.-specific, free, confidential, 24/7 treatment-referral and information service in English and Spanish: 1-800-662-HELP (4357). It is not an emergency line and does not provide crisis counseling. Elsewhere, contact local medical or public-health services.
 
+## Life-expectancy context
+
+A New South Wales cohort study followed 47,197 people prescribed opioid agonist treatment from 2001 to 2018 and estimated average cohort life expectancy at roughly 15 years below the general population.[4] This figure is displayed only as context for that cohort; it is not a personal forecast and cannot be applied to other substances or histories. A 2024 systematic review of opioid-related prediction models found heterogeneous, outcome-specific models with predominantly high risk of bias; it does not validate an arbitrary multi-drug life-years calculator.[5]
+
 ## General limits
 
-Source-backed content was checked against the linked public-health sources on 2026-10-17; this is a source check, not clinician or regulatory review. The app is educational and has not been clinically reviewed. It cannot diagnose, recommend a dose, verify substance contents, identify a safe combination, or predict an individual's addiction probability, brain health, impairment, recovery or lifespan. If a requested personal health estimate is not supported by a validated model for the exact inputs and setting, it is not estimable from this calculator.
+Source-backed content was checked against the linked public-health sources on 2026-10-18; this is a source check, not clinician or regulatory review. The app is educational and has not been clinically reviewed. It cannot diagnose, recommend a dose, verify substance contents, identify a safe combination, or predict an individual's addiction probability, brain health, impairment, recovery or lifespan. If a requested personal health estimate is not supported by a validated model for the exact inputs and setting, it is not estimable from this calculator.
+
+[4]: https://www.sciencedirect.com/science/article/pii/S0022395620309249 "Life expectancy of people prescribed opioid agonist treatment in New South Wales"
+[5]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11150108/ "Systematic review of opioid-related prediction models"
