@@ -1,33 +1,51 @@
-import { useMemo, useState } from 'react';
-import { ArrowDownRight, ArrowUpRight, BookOpen, Check, CircleHelp, Info, LockKeyhole, ShieldAlert } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowDownRight, ArrowUpRight, BookOpen, Check, CircleHelp, LockKeyhole, ShieldAlert } from 'lucide-react';
 import { EmergencyPanel } from './components/EmergencyPanel';
-import { InteractionChecker } from './components/InteractionChecker';
 import { SourceNotes } from './components/SourceNotes';
 import { SubstanceDirectory } from './components/SubstanceDirectory';
+import { UseHistoryCalculator } from './components/UseHistoryCalculator';
 import substanceIndex from './data/substances.json';
+import type { UsePeriod } from './types/history';
 import type { SubstanceDataset, SubstanceRecord } from './types/substance';
 
 const dataset = substanceIndex as SubstanceDataset;
+const MAX_USE_PERIODS = 12;
 
 const navigation = [
-  { href: '#overview', label: 'Overview', number: '00' },
-  { href: '#emergency', label: 'Immediate help', number: '01' },
-  { href: '#checker', label: 'Interaction context', number: '02' },
+  { href: '#calculator', label: 'History calculator', number: '01' },
+  { href: '#emergency', label: 'Immediate help', number: '02' },
   { href: '#directory', label: 'Substance index', number: '03' },
+  { href: '#scope', label: 'What it can show', number: '04' },
   { href: '#sources', label: 'Sources & limits', number: '05' },
 ];
 
-export default function App() {
-  const [selectedIds, setSelectedIds] = useState<string[]>([]);
-  const selectedRecords = useMemo(
-    () => dataset.records.filter((record) => selectedIds.includes(record.id)),
-    [selectedIds],
-  );
+function newPeriod(record: SubstanceRecord): UsePeriod {
+  return {
+    id: typeof crypto !== 'undefined' && 'randomUUID' in crypto ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`,
+    substanceId: record.id,
+    durationYears: null,
+    activeNow: true,
+    ageAtStart: null,
+    occasionsPerWeek: null,
+    amountPerOccurrence: null,
+    amountUnit: '',
+    customUnitLabel: '',
+    routes: [],
+  };
+}
 
-  const toggleSelected = (record: SubstanceRecord) => {
-    setSelectedIds((current) => current.includes(record.id)
-      ? current.filter((id) => id !== record.id)
-      : [...current, record.id]);
+export default function App() {
+  const [periods, setPeriods] = useState<UsePeriod[]>([]);
+  const [currentAge, setCurrentAge] = useState<number | null>(null);
+
+  const addPeriod = (record: SubstanceRecord) => {
+    if (periods.length >= MAX_USE_PERIODS) return;
+    setPeriods((current) => [...current, newPeriod(record)]);
+  };
+
+  const clearHistory = () => {
+    setPeriods([]);
+    setCurrentAge(null);
   };
 
   return (
@@ -35,13 +53,13 @@ export default function App() {
       <a className="skip-link" href="#main-content">Skip to main content</a>
 
       <header className="topbar">
-        <a className="brand" href="#overview" aria-label="Substance Field Guide home">
+        <a className="brand" href="#overview" aria-label="Substance use history calculator home">
           <img src="/fieldnotes-mark.svg" width="36" height="36" alt="" />
-          <span className="brand-wordmark">SUBSTANCE<span>FIELD GUIDE</span></span>
+          <span className="brand-wordmark">SUBSTANCE<span>USE HISTORY CALCULATOR</span></span>
         </a>
         <div className="topbar-meta">
-          <span className="edition-label">A public-health reference</span>
-          <span className="privacy-status"><LockKeyhole size={14} aria-hidden="true" /> No account · no saved selections</span>
+          <span className="edition-label">Evidence before estimates</span>
+          <span className="privacy-status"><LockKeyhole size={14} aria-hidden="true" /> Session-only · no account</span>
         </div>
       </header>
 
@@ -52,7 +70,7 @@ export default function App() {
 
       <div className="page-layout">
         <nav className="section-nav" aria-label="Page sections">
-          <div className="nav-caption">IN THIS GUIDE</div>
+          <div className="nav-caption">IN THIS TOOL</div>
           {navigation.map((item) => (
             <a className="nav-link" key={item.href} href={item.href}>
               <span className="nav-number">{item.number}</span>{item.label}
@@ -60,67 +78,67 @@ export default function App() {
           ))}
           <div className="nav-note">
             <LockKeyhole size={15} aria-hidden="true" />
-            <p>Your selections stay in this browser tab. They are not stored in an account or sent to a server.</p>
+            <p>Use-history entries remain in page memory only. They are not sent to a server or saved.</p>
           </div>
           <div className="nav-source-count"><BookOpen size={15} aria-hidden="true" /><span>{dataset.recordCount} index records<br />Snapshot · {new Intl.DateTimeFormat(undefined, { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(dataset.retrievedAt))}</span></div>
         </nav>
 
         <main id="main-content" className="main-content">
-          <EmergencyPanel />
+          <div className="emergency-anchor" aria-label="Immediate help"><EmergencyPanel /></div>
 
-          <section className="hero-section" id="overview">
+          <section className="hero-section calculator-hero" id="overview">
             <div className="hero-copy">
-              <div className="eyebrow"><span className="eyebrow-line" /> SAFETY INFORMATION · EVIDENCE FIRST</div>
-              <h1>Clear information.<br /><em>No false precision.</em></h1>
-              <p className="hero-lede">A searchable substance reference and a focused interaction checker—built to show what a source says, and where the evidence stops.</p>
+              <div className="eyebrow"><span className="eyebrow-line" /> USE HISTORY · TRANSPARENT ARITHMETIC</div>
+              <h1>Calculate what your history shows.<br /><em>Not what it cannot know.</em></h1>
+              <p className="hero-lede">Record multiple substances and changing use periods. See the arithmetic, units and assumptions beside each result—without turning them into a personal medical prediction.</p>
               <div className="hero-actions">
-                <a className="button-primary" href="#directory">Browse the index <ArrowDownRight size={16} aria-hidden="true" /></a>
-                <a className="button-secondary" href="#checker">Check selected substances <ArrowUpRight size={15} aria-hidden="true" /></a>
+                <a className="button-primary" href="#calculator">Build a use history <ArrowDownRight size={16} aria-hidden="true" /></a>
+                <a className="button-secondary" href="#sources">See evidence limits <ArrowUpRight size={15} aria-hidden="true" /></a>
               </div>
             </div>
             <aside className="hero-note" aria-label="Evidence principle">
-              <div className="hero-note-top"><span>FIELD NOTE</span><span>NO. 001</span></div>
+              <div className="hero-note-top"><span>CALCULATION NOTE</span><span>NO. 001</span></div>
               <div className="hero-note-mark"><span /> <span /> <span /></div>
-              <p>Population research is not a personal measurement.</p>
-              <div className="hero-note-bottom"><span>UNCERTAINTY</span><strong>MAKE IT VISIBLE</strong></div>
+              <p>A reported total is arithmetic, not a health-risk score.</p>
+              <div className="hero-note-bottom"><span>ASSUMPTIONS</span><strong>SHOW THEM</strong></div>
             </aside>
           </section>
 
-          <div className="measure-strip" aria-label="How this reference works">
-            <div><strong>{dataset.recordCount}</strong><span>substances indexed</span></div>
-            <div><strong>02</strong><span>focused interaction rules</span></div>
-            <div><strong>0</strong><span>personal scores or forecasts</span></div>
+          <div className="measure-strip" aria-label="How the tool works">
+            <div><strong>{dataset.recordCount}</strong><span>source-linked substance records</span></div>
+            <div><strong>Per period</strong><span>unit-preserving arithmetic</span></div>
+            <div><strong>0</strong><span>invented personal probabilities</span></div>
           </div>
 
-          <section className="checker-section" id="checker">
-            <div className="section-heading-row">
-              <div>
-                <div className="section-kicker"><span className="kicker-mark">02</span> Limited reference tool</div>
-                <h2>Check interaction context</h2>
-                <p>Select more than one substance from the index. The checker only displays a warning when its specific sources support one; everything else is unassessed.</p>
-              </div>
-              <div className="not-a-score"><Info size={15} aria-hidden="true" /> No numeric risk score</div>
-            </div>
-            <InteractionChecker selected={selectedRecords} onRemove={(id) => setSelectedIds((current) => current.filter((item) => item !== id))} onClear={() => setSelectedIds([])} />
-          </section>
+          <UseHistoryCalculator
+            records={dataset.records}
+            currentAge={currentAge}
+            onCurrentAgeChange={setCurrentAge}
+            periods={periods}
+            onPeriodsChange={setPeriods}
+            onAddPeriod={addPeriod}
+            onClear={clearHistory}
+            canAddPeriod={periods.length < MAX_USE_PERIODS}
+            maxPeriods={MAX_USE_PERIODS}
+          />
 
           <section className="library-section" id="directory">
-            <SubstanceDirectory records={dataset.records} selectedIds={selectedIds} onToggle={toggleSelected} />
+            <SubstanceDirectory records={dataset.records} onAdd={addPeriod} canAddPeriod={periods.length < MAX_USE_PERIODS} maxPeriods={MAX_USE_PERIODS} />
           </section>
 
-          <section className="can-cannot-section" aria-labelledby="scope-title">
+          <section className="can-cannot-section" id="scope" aria-labelledby="scope-title">
             <div className="section-kicker"><span className="kicker-mark">04</span> Scope, at a glance</div>
-            <h2 id="scope-title">Useful context, not a verdict.</h2>
+            <h2 id="scope-title">Useful arithmetic. Honest boundaries.</h2>
             <div className="scope-columns">
               <article className="scope-card scope-card-positive">
                 <div className="scope-icon"><Check size={16} aria-hidden="true" /></div>
-                <h3>This guide can</h3>
-                <p>Show directory metadata, link each entry to its source, and flag a small number of interactions described by an official public-health source.</p>
+                <h3>This calculator can</h3>
+                <p>Estimate reported duration, occasions and cumulative quantity for one substance-period when the required inputs and a consistent unit are supplied; show the formula and mark explicitly overlapping co-use periods against a limited set of source-backed warnings.</p>
               </article>
               <article className="scope-card scope-card-limits">
                 <div className="scope-icon"><CircleHelp size={16} aria-hidden="true" /></div>
-                <h3>This guide cannot</h3>
-                <p>Identify a safe dose or mixture, verify a substance's contents, diagnose a condition, or predict an individual's brain health, impairment, recovery, or lifespan.</p>
+                <h3>This calculator cannot</h3>
+                <p>Determine a diagnosis, addiction probability, safe dose, substance contents, brain age, impairment, recovery time or lifespan. An unassessed combination or missing estimate is not evidence of safety.</p>
               </article>
             </div>
           </section>
@@ -128,7 +146,7 @@ export default function App() {
           <SourceNotes dataset={dataset} />
 
           <footer className="site-footer">
-            <a className="footer-brand" href="#overview"><img src="/fieldnotes-mark.svg" width="24" height="24" alt="" /> SUBSTANCE / FIELD GUIDE</a>
+            <a className="footer-brand" href="#overview"><img src="/fieldnotes-mark.svg" width="24" height="24" alt="" /> SUBSTANCE / FIELD NOTES</a>
             <span>For education only. If someone's safety is at risk, contact emergency services.</span>
             <a href="#sources">Sources & limitations <ArrowUpRight size={13} aria-hidden="true" /></a>
           </footer>

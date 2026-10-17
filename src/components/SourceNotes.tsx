@@ -6,10 +6,12 @@ interface SourceNotesProps {
 }
 
 const references = [
+  { title: 'WHO · ASSIST manual for primary care', detail: 'A substance-specific screening tool intended to support early identification and care/referral in health-care settings; it is not a personal probability model.', url: 'https://www.who.int/publications/i/item/978924159938-2' },
+  { title: 'NIDA · TAPS screening tool', detail: 'A two-stage screen with substance-specific risk categories. NIDA says it should be used under medical-provider supervision and is not for self-diagnosis; sensitivity differs across substances.', url: 'https://nida.nih.gov/taps2/' },
+  { title: 'Peer-reviewed · TAPS validation in community pharmacies', detail: 'A study of adults filling opioid prescriptions in 19 pharmacies; performance varied by substance and threshold, so it does not validate a universal estimate for arbitrary mixtures.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8712403/' },
   { title: 'CDC · About polysubstance overdose', detail: 'Public-health surveillance and prevention context; co-involvement does not itself establish an individual outcome.', url: 'https://www.cdc.gov/overdose-prevention/about/polysubstance-overdose.html' },
   { title: 'NIAAA · Alcohol and potentially dangerous medication mixes', detail: 'Evidence for the exact, source-named alcohol + opioid and alcohol + benzodiazepine entries matched here.', url: 'https://www.niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol/alcohol-medication-interactions-potentially-dangerous-mixes' },
   { title: 'CDC · Stimulant overdose guide', detail: 'Emergency signs and actions for suspected stimulant overdose.', url: 'https://www.cdc.gov/overdose-prevention/media/pdfs/2024/03/CDC-Stimulant-Guide.pdf' },
-  { title: 'NIDA · Methamphetamine', detail: 'Official information on known short- and long-term health risks; not an individual prediction.', url: 'https://nida.nih.gov/research-topics/methamphetamine' },
   { title: 'SAMHSA · National Helpline', detail: 'U.S.-specific, free, confidential, 24/7 treatment-referral information service.', url: 'https://www.samhsa.gov/find-help/national-helpline' },
 ];
 
@@ -21,8 +23,8 @@ export function SourceNotes({ dataset }: SourceNotesProps) {
   return (
     <section className="sources-section" id="sources" aria-labelledby="sources-title">
       <div className="section-kicker"><span className="kicker-mark">05</span> Sources & limits</div>
-      <h2 id="sources-title">Show the evidence. Show the gaps.</h2>
-      <p className="sources-lede">This site avoids personal health forecasts because the available population studies do not validate them. It cannot measure brain health, diagnose a condition, predict recovery or lifespan, tell you a safe dose, or clear a substance combination.</p>
+      <h2 id="sources-title">Show the formula. Show the gaps.</h2>
+      <p className="sources-lede">The calculator reports user-entered arithmetic for one period at a time. Individual probabilities of addiction, overdose, brain changes, recovery, or lifespan are not estimable from this calculator; no validated model matches this set of inputs. It does not apply a dose/route multiplier or convert that history into a personal medical outcome. Clinical screening links and their limits are listed below.</p>
 
       <div className="source-dataset-card">
         <BookOpen size={20} aria-hidden="true" />
@@ -48,7 +50,8 @@ export function SourceNotes({ dataset }: SourceNotesProps) {
         ))}
       </div>
 
-      <div className="limitations-note"><Info size={17} aria-hidden="true" /><p><strong>Not a clinical tool.</strong> Interaction coverage is deliberately narrow. A warning is general information, not a personal risk estimate; no warning means “not assessed here,” not “safe.” Verify prescription questions with an official label, pharmacist, or clinician.</p></div>
+      <div className="calculation-method-note"><Info size={17} aria-hidden="true" /><p><strong>How totals are derived:</strong> duration in years × 52.18 weeks/year × average occasions/week = approximate occasions; approximate occasions × user-entered amount/occasion = approximate amount for that single period in its entered unit. This assumes the average pattern held for the whole period. No units are converted and amounts are not summed across substances. This is not toxicology or a validated health-risk estimate.</p></div>
+      <div className="limitations-note"><Info size={17} aria-hidden="true" /><p><strong>Not a clinical tool.</strong> Interaction coverage is deliberately narrow. A warning is general information, not a personal risk estimate; no warning means “not assessed here,” not “safe.” Screening resources are not diagnoses. Verify medication questions with an official label, pharmacist, or clinician.</p></div>
     </section>
   );
 }

@@ -265,3 +265,144 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+
+/* Calculator-first experience */
+.emergency-anchor { scroll-margin-top: 112px; }
+.calculator-hero { padding-bottom: 31px; }
+.calculator-section { padding-top: 35px; scroll-margin-top: 90px; }
+.calculator-intro { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 17px; }
+.calculator-intro h2, .co-use-heading h3 { margin: 10px 0 8px; color: var(--ink); font-family: var(--serif); font-size: clamp(29px, 3vw, 38px); font-weight: 400; line-height: 1.1; letter-spacing: -.025em; }
+.calculator-intro p, .co-use-heading p { max-width: 650px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
+.calculator-symbol { width: 46px; height: 46px; flex: 0 0 auto; display: grid; place-items: center; margin-top: 4px; color: var(--pine); background: var(--pine-pale); border: 1px solid #cadbce; border-radius: 50%; }
+.calculator-privacy { display: flex; align-items: center; gap: 8px; margin: 14px 0; padding: 11px 13px; color: var(--pine-dark); background: #eaf1e9; border: 1px solid #d5e2d5; border-radius: 4px; font-size: 10px; line-height: 1.5; }
+.calculator-privacy svg { flex: 0 0 auto; }
+.calculator-age-card { display: grid; grid-template-columns: minmax(130px, .35fr) minmax(130px, .3fr) minmax(0, 1fr); align-items: center; gap: 11px; margin: 17px 0; padding: 13px 15px; background: var(--paper-bright); border: 1px solid var(--line); border-radius: 5px; }
+.calculator-age-card > label, .substance-picker > label { color: var(--ink-soft); font-size: 11px; font-weight: 700; }
+.calculator-age-card label span, .period-fields label > span, .ended-age-field span { margin-left: 4px; color: var(--muted); font-size: 9px; font-weight: 400; }
+.calculator-age-card input, .period-fields input, .period-fields select, .ended-age-field input { width: 100%; min-height: 39px; margin-top: 6px; padding: 8px 10px; color: var(--ink); background: #fff; border: 1px solid #cbd2c8; border-radius: 3px; font-size: 12px; }
+.calculator-age-card p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.55; }
+.substance-picker { position: relative; z-index: 5; margin: 21px 0 16px; }
+.substance-picker > label { display: block; margin-bottom: 8px; }
+.calculator-search-field { min-height: 48px; }
+.calculator-search-field input { height: 46px; }
+.calculator-search-results { position: absolute; z-index: 20; top: calc(100% + 5px); left: 0; width: 100%; max-height: 300px; overflow-y: auto; padding: 5px; background: var(--paper-bright); border: 1px solid #cbd2c8; border-radius: 4px; box-shadow: 0 9px 25px #17221b20; }
+.calculator-search-results > button { width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 10px; text-align: left; background: transparent; border: 0; border-bottom: 1px solid #e9ebe4; cursor: pointer; }
+.calculator-search-results > button:hover, .calculator-search-results > button:focus-visible { background: #edf3ed; }
+.calculator-search-results > button > span:first-child { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.calculator-search-results strong { color: var(--ink); font-size: 11px; }
+.calculator-search-results small { overflow: hidden; color: var(--muted); font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.add-period-label { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 4px; color: var(--pine-dark); font-size: 9px; font-weight: 700; }
+.calculator-search-results > p { margin: 0; padding: 13px; color: var(--muted); font-size: 11px; }
+.calculator-search-results .search-more-note { border-top: 1px solid var(--line); font-family: var(--mono); font-size: 9px; }
+.calculator-empty { display: flex; align-items: flex-start; gap: 12px; padding: 18px; color: var(--ink-soft); background: var(--paper-bright); border: 1px dashed #bdc9be; border-radius: 5px; }
+.empty-mark { width: 28px; height: 28px; flex: 0 0 auto; display: grid; place-items: center; color: var(--pine); background: var(--pine-pale); border-radius: 50%; }
+.calculator-empty strong { color: var(--ink); font-size: 12px; }
+.calculator-empty p { margin: 5px 0 0; color: var(--muted); font-size: 10px; line-height: 1.6; }
+.period-list { display: flex; flex-direction: column; gap: 15px; }
+.period-card { min-width: 0; padding: 17px; background: var(--paper-bright); border: 1px solid var(--line); border-left: 3px solid var(--pine); border-radius: 5px; }
+.period-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; padding-bottom: 12px; border-bottom: 1px solid #e3e7dd; }
+.period-overline { color: var(--pine); font-family: var(--mono); font-size: 8px; letter-spacing: .13em; }
+.period-header h3 { margin: 5px 0 3px; color: var(--ink); font-family: var(--serif); font-size: 22px; font-weight: 400; }
+.period-header p { margin: 0; color: var(--muted); font-size: 9px; }
+.period-header-actions { display: flex; align-items: center; gap: 9px; }
+.period-header-actions a { display: inline-flex; align-items: center; gap: 4px; color: var(--pine-dark); font-size: 9px; text-decoration: underline; text-underline-offset: 3px; }
+.remove-period { width: 31px; height: 31px; display: grid; place-items: center; color: #755d55; background: transparent; border: 1px solid #e2d8d2; border-radius: 50%; cursor: pointer; }
+.remove-period:hover { color: var(--danger); background: var(--danger-pale); }
+.period-fields { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 11px; padding: 15px 0 12px; }
+.period-fields > label, .ended-age-field { min-width: 0; display: flex; flex-direction: column; color: var(--ink-soft); font-size: 10px; font-weight: 700; }
+.period-fields > label > span { display: inline; margin: 3px 0 0; line-height: 1.3; }
+.period-fields input, .period-fields select { min-width: 0; }
+.period-options { display: flex; flex-wrap: wrap; align-items: center; gap: 13px 20px; padding: 0 0 13px; }
+.checkline { display: inline-flex; align-items: center; gap: 7px; color: var(--ink-soft); font-size: 10px; cursor: pointer; }
+input[type="checkbox"] { width: 15px; height: 15px; flex: 0 0 auto; accent-color: var(--pine); }
+.age-result { padding: 7px 10px; color: var(--pine-dark); background: #eaf1e9; border-radius: 3px; font-size: 10px; }
+.age-result strong { font-size: 13px; }
+.age-result span { margin-left: 4px; color: var(--muted); font-size: 9px; }
+.ended-age-field { max-width: 210px; }
+.ended-age-field input { margin-top: 5px; }
+.route-fieldset { min-width: 0; margin: 0; padding: 12px 0 13px; border: 0; border-top: 1px solid #e5e8df; }
+.route-fieldset legend { padding: 0 8px 0 0; color: var(--ink-soft); font-size: 10px; font-weight: 700; }
+.route-fieldset legend span { margin-left: 6px; color: var(--muted); font-size: 9px; font-weight: 400; }
+.route-options { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.route-option { min-height: 29px; display: inline-flex; align-items: center; gap: 5px; padding: 4px 8px; color: #58665e; background: #eeefe8; border: 1px solid transparent; border-radius: 18px; font-size: 9px; cursor: pointer; }
+.route-option.is-active { color: var(--pine-dark); background: #e0ede3; border-color: #a8c6b1; }
+.route-option input { width: 13px; height: 13px; }
+.route-empty { margin: 7px 0 0; color: var(--muted); font-size: 9px; }
+.period-calculations { margin-top: 5px; padding: 12px; background: #f1f4ed; border: 1px solid #dfe7dc; border-radius: 4px; }
+.calc-heading { display: flex; align-items: center; gap: 7px; color: var(--pine-dark); font-size: 10px; font-weight: 700; }
+.calc-heading small { margin-left: auto; color: var(--muted); font-family: var(--mono); font-size: 8px; font-weight: 400; text-transform: uppercase; }
+.calc-result-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 11px 0 9px; }
+.calc-result-grid > div { min-width: 0; display: flex; flex-direction: column; gap: 5px; padding: 9px; background: var(--paper-bright); border: 1px solid #e2e7dd; border-radius: 3px; }
+.calc-result-grid span { color: var(--muted); font-size: 8px; }
+.calc-result-grid strong { overflow-wrap: anywhere; color: var(--ink); font-size: 11px; line-height: 1.45; }
+.formula-note, .calc-validation-note { margin: 0; color: var(--muted); font-size: 9px; line-height: 1.6; }
+.calc-validation-note { margin-top: 7px; color: #8b3a25; }
+.co-use-section { padding-top: 31px; }
+.co-use-heading { display: flex; justify-content: space-between; gap: 15px; margin-bottom: 13px; }
+.co-use-heading h3 { margin: 7px 0; font-size: 25px; }
+.co-use-pairs { display: flex; flex-direction: column; gap: 8px; }
+.co-use-pair { padding: 12px 13px; background: var(--paper-bright); border: 1px solid var(--line); border-radius: 4px; }
+.co-use-pair.is-selected { border-color: #d5c29f; }
+.co-use-toggle { display: flex; align-items: flex-start; gap: 9px; cursor: pointer; }
+.co-use-toggle input { margin-top: 2px; }
+.co-use-toggle span { display: flex; flex-direction: column; gap: 3px; }
+.co-use-toggle strong { color: var(--ink); font-size: 10px; font-weight: 600; }
+.co-use-toggle small { color: var(--muted); font-size: 8px; }
+.co-use-empty { margin: 0; padding: 12px; color: var(--muted); background: var(--paper-bright); border: 1px dashed var(--line); font-size: 10px; }
+.co-use-finding { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; margin-top: 11px; padding: 11px; color: #752a23; background: var(--danger-pale); border: 1px solid #efcbc4; border-radius: 4px; }
+.co-use-finding > svg { margin-top: 2px; }
+.co-use-finding strong { font-size: 10px; }
+.co-use-finding p { margin: 5px 0 7px; color: #51403c; font-size: 9px; line-height: 1.6; }
+.co-use-finding a { display: inline-flex; align-items: center; gap: 4px; color: #752a23; font-size: 9px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.co-use-unknown { margin: 10px 0 0; padding: 10px; color: #604919; background: var(--amber-pale); border-left: 3px solid #c78638; font-size: 9px; line-height: 1.6; }
+.calculator-limits { display: flex; gap: 9px; margin-top: 17px; padding: 12px; color: #64563d; background: #f7f0e1; border: 1px solid #e8dcc2; border-radius: 4px; }
+.calculator-limits > svg { flex: 0 0 auto; margin-top: 1px; }
+.calculator-limits p { margin: 0; font-size: 9px; line-height: 1.65; }
+.clear-history-button { min-height: 36px; display: inline-flex; align-items: center; gap: 7px; margin-top: 13px; padding: 0 11px; color: #70403c; background: transparent; border: 1px solid #d8bdb6; border-radius: 3px; font-size: 9px; cursor: pointer; }
+.clear-history-button:hover { background: #fff0eb; }
+.calculator-data-note { margin: 12px 0 0; color: var(--muted); font-family: var(--mono); font-size: 8px; line-height: 1.6; }
+.directory-added-status { min-height: 16px; margin: 5px 0 7px; color: var(--pine-dark); font-size: 9px; }
+.calculation-method-note { display: flex; gap: 9px; margin-top: 16px; padding: 12px; color: var(--pine-dark); background: #eaf1e9; border: 1px solid #d5e2d5; border-radius: 4px; }
+.calculation-method-note svg { flex: 0 0 auto; margin-top: 2px; }
+.calculation-method-note p { margin: 0; font-size: 9px; line-height: 1.65; }
+
+@media (max-width: 980px) {
+  .period-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .calculator-age-card { grid-template-columns: minmax(110px, .4fr) minmax(120px, .35fr) minmax(0, 1fr); }
+}
+@media (max-width: 720px) {
+  .calculator-section { padding-top: 24px; }
+  .calculator-intro { gap: 10px; }
+  .calculator-intro h2 { font-size: 30px; }
+  .calculator-symbol { width: 38px; height: 38px; }
+  .calculator-age-card { grid-template-columns: 1fr 1fr; }
+  .calculator-age-card p { grid-column: 1 / -1; }
+  .period-card { padding: 13px; }
+  .period-fields { gap: 8px; }
+  .calc-result-grid { grid-template-columns: 1fr; }
+  .calc-result-grid > div { display: grid; grid-template-columns: minmax(105px, .65fr) 1fr; align-items: start; }
+  .co-use-heading h3 { font-size: 23px; }
+  .directory-added-status { margin: 4px 0; }
+}
+@media (max-width: 410px) {
+  .calculator-age-card { grid-template-columns: 1fr; }
+  .calculator-age-card p { grid-column: auto; }
+  .period-fields { grid-template-columns: 1fr; }
+  .period-header { gap: 8px; }
+  .period-header h3 { font-size: 19px; }
+  .period-header-actions { gap: 5px; }
+  .period-header-actions a { font-size: 8px; }
+  .period-options { align-items: flex-start; flex-direction: column; }
+  .ended-age-field { max-width: none; width: 100%; }
+  .route-fieldset legend span { display: block; margin: 3px 0 0; }
+  .calculator-search-results > button { align-items: flex-start; flex-direction: column; }
+  .add-period-label { margin-left: 2px; }
+}
+
+
+.period-limit-note { margin: 10px 0; padding: 10px 12px; color: #604919; background: var(--amber-pale); border-left: 3px solid #c78638; font-size: 9px; line-height: 1.55; }
+.calculator-search-results > button:disabled { opacity: .55; cursor: not-allowed; }
+.calculator-search-results > button:disabled:hover { background: transparent; }
+.select-substance:disabled { opacity: .55; cursor: not-allowed; }
+.select-substance:disabled:hover { background: transparent; }

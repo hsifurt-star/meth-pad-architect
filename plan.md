@@ -2,55 +2,56 @@
 
 ## Product direction
 
-Continue from the existing `meth-pad-architect` React/TypeScript/Vite site. Replace the unsupported individual harm-prediction calculator with an evidence-traced, non-scored harm-reduction guide. Keep an interactive tool, but do not claim to measure brain health, diagnose, predict lifespan or recovery, or calculate a safe amount. The first release should serve as a credible base that can be improved iteratively.
+Continue from the existing `meth-pad-architect` React/TypeScript/Vite site. Make the primary experience a multi-substance use-history calculator backed by a broad searchable substance index. Let a visitor describe distinct periods for multiple substances, then return transparent arithmetic summaries and only source-backed co-use warnings. The app must not convert user-entered history into invented addiction, brain-age, recovery, lifespan, or overdose probabilities.
 
-### Evidence and information design
+## Calculator behavior and scientific limits
 
-- Remove self-reported dose/year/sex/route multipliers, synthetic recovery curves, PAD/brain-age and DSST estimates, lifespan/life-years-lost forecasts, and visualizations presented as brain/connectome measurements. Those outputs are not validated for these inputs; the cited fMRI study reports group-level associations from imaging data rather than an individual prediction from a web form.
-- Avoid dose recommendations, use planning, route rankings, onset/duration comparisons, clearance countdowns, a dose log, or an individual numeric risk score.
-- Build a searchable broad substance index from PsychonautWiki's public semantic data/API where fields can be verified. Retain only factual directory metadata needed for browsing (name, class/category, reported routes and a source link); do not ingest dose guidance or user experiences. Omit common-name aliases because a source sample contains a likely mismapping. Attribute the source and its CC BY 4.0 semantic-data license, include a snapshot/review date, and explain that community-curated records are not clinical consensus. Do not bulk copy the TripSit repository unless explicit reuse permission is established.
-- Make route labels useful for filtering and reference, not recommendations: do not order routes by speed/potency or imply that any route is safe. Multiple selected route filters and multiple selected substances are allowed when useful.
-- Replace numeric prediction with transparent, non-scored, rule-based interaction warnings only for explicitly named substances supported by an official or peer-reviewed source. Match against a small reviewed set of named entries rather than broad community class labels (which can contain antagonists such as naloxone). A missing rule must say evidence is insufficient; it must never imply a combination is safe. Distinguish observed co-involvement from causal interaction. The checker is educational, incomplete, and not a substitute for checking prescription labels or urgent clinical advice.
-- Put emergency guidance and the local emergency-number prompt first, with a US SAMHSA support link as a clearly labeled US-specific resource. Do not collect personal health or usage data; selected items remain transient in the browser. Include nonjudgmental language and plain limitations throughout.
-- Scientific coverage is improved by traceability, correct population-level interpretation and honest uncertainty, not by inventing a new clinical score. The result is educational general information, not medical advice or a clinician-reviewed device.
+- Allow an optional current age and up to 12 use-period entries in one in-memory profile. Each period references a substance from the indexed dataset and records its duration, whether that pattern is ongoing, optional age at start for a past period, usual occasions per week, optional amount per occasion and its original unit, and one or more source-reported routes. A second entry for the same substance represents a changed period or pattern.
+- Calculate approximate occasions as duration in years × 365.2425/7 weeks per year × entered average occasions per week. Calculate approximate cumulative reported amount as occasions × entered average amount per occasion only when all inputs and a unit are supplied. Keep results per period and in their original units. Never add quantities across substances or periods or convert mg, g, mcg, mL, tablets, or user-labeled units.
+- Label these as user-history arithmetic, not toxicology, dependence, safe-use advice or predicted health outcomes. State that totals assume the entered average pattern remained typical for the entire period; users with changed patterns should enter separate periods. For an ongoing period, optionally derive age at start as current age minus duration; for a past period, treat entered age at start as user-provided. Missing or invalid values produce no estimate rather than a guess.
+- Let users explicitly mark which substance-period pairs overlapped. Run only the narrowly sourced interaction rules against those marked pairs. Do not let age, dose, frequency, route or duration modify a warning or create a risk multiplier.
+- Link to validated screening resources such as WHO ASSIST and NIDA TAPS with their clinical-use, substance-coverage and diagnostic limits. Do not reproduce or alter a clinical screening instrument unless its intended setting and reuse terms are verified. Screening categories are not individual outcome probabilities or diagnoses.
+- No user-entered history is transmitted or persisted. Keep it in component memory, with a visible clear-all control and privacy explanation. Do not save it to localStorage, a database, or analytics.
 
-### Data strategy
+## Evidence and data strategy
 
-PsychonautWiki states that semantic data are reusable under CC BY 4.0 with attribution and most content is CC BY-SA 4.0. Use only semantic fields and attribution; link users to each source. Generate a checked-in static data snapshot so the site works without an API request or user-data transfer. Keep an update script and a compact source/attribution note with the source endpoint, license, extraction policy and update date. Validate API field shapes and stable IDs before extracting. Leave any unavailable or ambiguous field blank rather than infer it; quarantine the known 1,3-Butanediol class/route mismatch until reviewed. TripSit data do not show an explicit repository license, so do not copy its dataset.
+- Keep the checked-in, attributed PsychonautWiki semantic snapshot as the searchable index (currently 373 source records). It provides names, source links, class labels and reported routes; it does not provide a validated cross-substance dose-response model. Do not imply that an index entry's community metadata is clinically verified.
+- Keep dose and duration data user-entered and unsourced; do not import dose guidance, onset, duration or potency tables as calculator coefficients. Route labels remain descriptive, not ranked or recommended. Maintain the 1,3-Butanediol quarantine and update-time schema/ID checks.
+- Use WHO ASSIST and NIDA TAPS only as cited links/reference pathways unless exact intended-use and reuse conditions are satisfied. Explain that screening is not diagnosis and that TAPS performance differs by substance.
+- Every interaction finding has a source, exact match criteria and a stated gap. Where no validated model covers the requested personal estimate, say it is not estimable from this calculator rather than fabricating a number. Keep emergency guidance prominent and independent of calculations.
 
-### Stack and serving
+## Stack and serving
 
-Use the existing React 18 + TypeScript + Vite foundation with a native CSS editorial system; upgrade Vite to a patched release and remove unused Tailwind/PostCSS dependencies. The site is a static client-side app and does not need a managed server or database: no accounts, server-side health data or persistence are planned. Keep choices in ephemeral component state only. Use links to CDC, NIAAA, NIDA, SAMHSA and original research alongside the source dataset. No generated decorative imagery is needed for this information tool.
+Use the current React 18 + TypeScript + Vite static application, native CSS editorial system and pinned lockfile. No managed server or database is needed. The application uses an in-memory history model and the bundled index. The developer preview listens on port 3000; `/manus-routes.json` declares the single `/` route. Keep external source links visible and browser-facing URLs relative.
 
 ## Project structure
 
-- `src/App.tsx`: application shell, section navigation and in-memory state for filters/selections.
-- `src/components/`: emergency/support panel, directory search/filter, detail/source panel and interaction checker; reuse or refactor existing components as appropriate.
-- `src/data/`: checked-in attributed substance metadata and separately curated, source-cited interaction rules.
-- `src/lib/`: pure filtering and evidence-rule matching (qualitative results only; no numeric risk model).
-- `src/types/`: explicit source/evidence/license and directory record types.
-- `src/index.css`: responsive editorial design tokens, accessible focus states and reduced-motion behavior.
-- `public/manus-routes.json`: complete static route manifest (single-page `/`).
-- `scripts/`: repeatable, constrained dataset refresh/validation script; no dosage fields are emitted.
-- `docs/`: source notes, update date and dataset attribution.
+- `src/App.tsx`: site shell, emergency-first messaging, primary calculator and navigation.
+- `src/components/UseHistoryCalculator.tsx`: multi-substance period editor, pairwise overlap selection and calculation/result cards.
+- `src/components/EmergencyPanel.tsx`: emergency signs, immediate action and clearly labeled US helpline.
+- `src/components/SubstanceDirectory.tsx`: searchable index and descriptive routes/classes.
+- `src/components/SourceNotes.tsx`: dataset attribution, calculation limits and validated-screening links.
+- `src/data/substances.json`: attributed, versioned static source snapshot.
+- `src/lib/history-calculations.ts`: pure, unit-preserving arithmetic for use periods; never a clinical probability model.
+- `src/lib/interaction-checker.ts`: small source-linked rules matched only to explicitly supported entries and co-use pairs.
+- `src/types/`: typed index, exposure-period, history and warning records.
+- `src/index.css`: responsive calculator form/result states using the existing editorial design language.
+- `scripts/`: constrained dataset refresh plus regression checks for arithmetic and interaction boundaries.
+- `docs/`: data provenance, calculator assumptions and scientific scope.
 
 ## Design
 
-Three alternative directions were considered: **Swiss public-health field guide** (0.08), **warm library index cards** (0.06), and **dark laboratory terminal** (0.04). Chosen: the **Swiss public-health field guide**, a quiet editorial style that makes sources and uncertainty easy to see and keeps urgent information highly legible.
+Three alternative directions were considered: **Swiss public-health field guide** (0.08), **warm library index cards** (0.06), and **dark laboratory terminal** (0.04). Chosen: the **Swiss public-health field guide**, a quiet editorial style that makes sources, user-provided data and uncertainty easy to distinguish while keeping urgent information highly legible.
 
 - **Design Movement:** Swiss editorial information design translated into a contemporary public-health field guide.
-- **Core Principles:** Urgent guidance has unmistakable priority; evidence and uncertainty sit beside each claim; navigation stays calm and predictable; content works at mobile sizes without dense tables.
-- **Color Philosophy:** Warm paper and ink establish a non-alarmist reading surface. Deep pine is the signature focus/brand color. Amber distinguishes caution; clear red is reserved for emergency action and never used as an ungrounded risk grade.
-- **Layout Paradigm:** Left-aligned editorial document with a narrow section index, a wide reading column, and an adjacent source rail on large screens; stacks into a readable single column on mobile instead of centering a dashboard grid.
-- **Signature Elements:** Small numbered evidence labels; fine ruled dividers with a green section marker; compact source chips that expose the original citation.
-- **Interaction Philosophy:** Search is immediate, filters are multi-select and clearly removable, selections never persist, and every interaction communicates scope without assigning the visitor a score.
+- **Core Principles:** The calculator is the main task; emergency guidance stays prominent; computed values show their inputs and assumptions; content works at mobile sizes without dense tables.
+- **Color Philosophy:** Warm paper and ink establish a non-alarmist reading surface. Deep pine is the signature focus/brand color. Amber distinguishes uncertainty; clear red is reserved for emergency action and never used as an ungrounded risk grade.
+- **Layout Paradigm:** Left-aligned editorial document with a narrow section index and a wide calculator work area; results sit adjacent to their input period on large screens and stack directly below it on mobile.
+- **Signature Elements:** Small numbered evidence labels; fine ruled dividers with a green section marker; compact source chips beside calculated and evidence-backed statements.
+- **Interaction Philosophy:** Multiple episodes and substances are easy to add/remove within the 12-period cap; inputs are explicit and optional when not needed; route controls are multi-select; clear-all is visible; entries are session-only; no opaque score is shown.
 - **Animation:** Minimal and functional: short opacity/height transitions only, no pulsation, simulated neural networks or alarming motion; obey `prefers-reduced-motion`.
-- **Typography System:** A legible native sans-serif (Avenir Next/Segoe UI/Arial fallbacks) for interface/body copy, paired with a restrained editorial serif (Iowan Old Style/Palatino/Georgia fallbacks) for the main display title; a modest system monospace is reserved for evidence metadata. Load no third-party font service so the site does not send visitors' requests to an extra provider.
-- **Brand Essence:** A careful, source-traced guide to substance health information that replaces invented certainty with honest evidence. Personality: calm, candid, humane.
-- **Brand Voice:** Headlines are direct and nonjudgmental; calls to action point to concrete next steps. Examples: “Get help now if someone is unresponsive.” “This information can’t tell you that a combination is safe.”
+- **Typography System:** A legible native sans-serif (Avenir Next/Segoe UI/Arial fallbacks) for interface/body copy, paired with a restrained editorial serif (Iowan Old Style/Palatino/Georgia fallbacks) for display headings; a modest system monospace is reserved for numeric inputs/evidence metadata. Load no third-party font service.
+- **Brand Essence:** A careful, source-traced calculator for recording substance-use history without pretending to predict an individual's health outcome. Personality: calm, candid, humane.
+- **Brand Voice:** Headlines are direct and nonjudgmental; calls to action point to concrete next steps. Examples: “See what your history adds up to.” “A calculated total is not a health-risk prediction.”
 - **Wordmark & Logo:** “SUBSTANCE / FIELD NOTES” with a custom small index-mark of three uneven ruled lines and a numbered source dot; no medical cross or brain icon.
 - **Signature Brand Color:** Deep pine, used for source-linked wayfinding and the primary mark.
-
-## Main interactions
-
-A prominent emergency/support view is available first. The directory can be searched across the imported substance names, filtered by category and by multiple reported route labels, and opened to see its source. Multiple substances may be selected together for a non-scored interaction check. Only explicit, source-backed warnings are shown; all other pairs receive a clear “not enough evidence here to assess; not a declaration of safety” result. The interface shows source quality/context where available and does not produce an individual health prediction.

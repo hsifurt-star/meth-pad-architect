@@ -4,8 +4,9 @@ import type { SubstanceRecord } from '../types/substance';
 
 interface SubstanceDirectoryProps {
   records: SubstanceRecord[];
-  selectedIds: string[];
-  onToggle: (record: SubstanceRecord) => void;
+  onAdd: (record: SubstanceRecord) => void;
+  canAddPeriod: boolean;
+  maxPeriods: number;
 }
 
 function toggleInSet(current: Set<string>, value: string): Set<string> {
@@ -15,12 +16,13 @@ function toggleInSet(current: Set<string>, value: string): Set<string> {
   return next;
 }
 
-export function SubstanceDirectory({ records, selectedIds, onToggle }: SubstanceDirectoryProps) {
+export function SubstanceDirectory({ records, onAdd, canAddPeriod, maxPeriods }: SubstanceDirectoryProps) {
   const [query, setQuery] = useState('');
   const [classFilters, setClassFilters] = useState<Set<string>>(new Set());
   const [routeFilters, setRouteFilters] = useState<Set<string>>(new Set());
   const [visibleCount, setVisibleCount] = useState(24);
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [addedMessage, setAddedMessage] = useState('');
 
   const classes = useMemo(() => [...new Set(records.flatMap((record) => record.psychoactiveClasses))].sort((a, b) => a.localeCompare(b)), [records]);
   const routes = useMemo(() => [...new Set(records.flatMap((record) => record.reportedRoutes))].sort((a, b) => a.localeCompare(b)), [records]);
@@ -40,13 +42,18 @@ export function SubstanceDirectory({ records, selectedIds, onToggle }: Substance
   const visible = filtered.slice(0, visibleCount);
   const hasFilters = Boolean(query.trim()) || classFilters.size > 0 || routeFilters.size > 0;
 
+  const addRecord = (record: SubstanceRecord) => {
+    onAdd(record);
+    setAddedMessage(`${record.name} added as a new period in the calculator.`);
+  };
+
   return (
     <section className="directory" aria-labelledby="directory-title">
       <div className="directory-intro">
         <div>
           <div className="section-kicker"><span className="kicker-mark">03</span> Substance index</div>
-          <h2 id="directory-title">Browse the reference</h2>
-          <p>Search names and source classifications. Route labels are descriptive source metadata, not recommendations or safety rankings.</p>
+          <h2 id="directory-title">Search the wider index</h2>
+          <p>Find a source record, inspect its listed classes and routes, then add it as another calculator period. Route labels describe the source metadata; they are not recommendations or safety rankings.</p>
         </div>
         <div className="index-count"><span>{records.length}</span><small>source records</small></div>
       </div>
@@ -78,20 +85,21 @@ export function SubstanceDirectory({ records, selectedIds, onToggle }: Substance
         <span>{filtered.length === 0 ? 'No records match these filters' : `Showing ${Math.min(visibleCount, filtered.length)} of ${filtered.length} matching records`}</span>
         <span>Source metadata may be incomplete</span>
       </div>
+      {!canAddPeriod && <p className="period-limit-note" role="status">This profile is at its {maxPeriods}-period limit. Remove a period above or clear the history to add another.</p>}
+      <p className="directory-added-status" role="status" aria-live="polite">{addedMessage}</p>
 
       <div className="substance-list">
         {visible.map((record) => {
-          const isSelected = selectedIds.includes(record.id);
           const isExpanded = expandedId === record.id;
           return (
-            <article className={`substance-row ${isSelected ? 'is-selected' : ''}`} key={record.id}>
+            <article className="substance-row" key={record.id}>
               <div className="substance-row-main">
                 <button type="button" className="substance-name-button" onClick={() => setExpandedId(isExpanded ? null : record.id)} aria-expanded={isExpanded}>
                   <span className="substance-name">{record.name}</span>
                   <span className="substance-subtitle">{record.psychoactiveClasses.length ? record.psychoactiveClasses.join(' · ') : 'Class not listed'}</span>
                 </button>
-                <button type="button" className={`select-substance ${isSelected ? 'selected' : ''}`} onClick={() => onToggle(record)} aria-pressed={isSelected}>
-                  {isSelected ? <><Check size={15} /> Added</> : <>Add to check</>}
+                <button type="button" className="select-substance" disabled={!canAddPeriod} onClick={() => addRecord(record)} aria-label={`Add another ${record.name} use period to the calculator`}>
+                  <Check size={14} aria-hidden="true" /> {canAddPeriod ? 'Add period' : 'Limit reached'}
                 </button>
               </div>
               {isExpanded && (
