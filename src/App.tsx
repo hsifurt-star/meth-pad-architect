@@ -8,7 +8,7 @@ import {
   BiologicalSex 
 } from './math/calculatorEngine';
 import { ConnectomeCanvas } from './components/ConnectomeCanvas';
-import { Activity, Brain, ShieldCheck, Flame, HeartPulse, Sliders, Users } from 'lucide-react';
+import { Activity, Brain, ShieldCheck, Flame, HeartPulse, Users, CheckSquare, Square } from 'lucide-react';
 
 export default function App() {
   const [inputs, setInputs] = useState<UserInputs>({
@@ -16,7 +16,7 @@ export default function App() {
     onsetAge: 20,
     yearsOfUse: 3.0,
     dailyGrams: 0.3,
-    roa: 'smoke',
+    roas: ['smoke'],
     speedball: 'none',
     usagePattern: 'chronic',
     biologicalSex: 'male',
@@ -33,16 +33,30 @@ export default function App() {
     setInputs((prev) => ({ ...prev, [key]: value }));
   };
 
+  const toggleRoa = (roa: ROA) => {
+    setInputs((prev) => {
+      const exists = prev.roas.includes(roa);
+      let updatedRoas: ROA[];
+      if (exists) {
+        // Keep at least one or allow empty (engine defaults gracefully)
+        updatedRoas = prev.roas.filter((r) => r !== roa);
+      } else {
+        updatedRoas = [...prev.roas, roa];
+      }
+      return { ...prev, roas: updatedRoas };
+    });
+  };
+
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans p-4 max-w-4xl mx-auto pb-12">
       <header className="border-b border-zinc-800 pb-3 mb-5">
         <div className="flex items-center gap-2 text-rose-500 mb-0.5">
           <Activity className="w-4 h-4" />
-          <span className="text-[11px] font-mono uppercase tracking-widest">Precision Clinical Tool v2.0</span>
+          <span className="text-[11px] font-mono uppercase tracking-widest">Precision Clinical Tool v2.2</span>
         </div>
         <h1 className="text-xl font-bold tracking-tight">Addiction Biological Impact Calculator</h1>
         <p className="text-xs text-zinc-400 mt-0.5">
-          Advanced neuroimaging regression modeling (Wen et al.) with polydrug compounding and neuroplastic recovery curves.
+          Advanced neuroimaging regression modeling with multi-ROA compounding, privacy imputation, and recovery curves.
         </p>
       </header>
 
@@ -97,82 +111,90 @@ export default function App() {
             </div>
           </div>
 
-          {/* Biological Sex & Usage Pattern */}
-          <div className="grid grid-cols-2 gap-3 pt-1">
-            <div>
-              <label className="text-xs text-zinc-400 block mb-1.5 flex items-center gap-1">
-                <Users className="w-3 h-3 text-purple-400" /> Biological Sex
-              </label>
-              <div className="grid grid-cols-2 gap-1.5">
-                {(['male', 'female'] as BiologicalSex[]).map((sex) => (
-                  <button
-                    key={sex}
-                    onClick={() => updateInput('biologicalSex', sex)}
-                    className={`py-1.5 text-xs font-mono rounded-lg border capitalize transition-all ${
-                      inputs.biologicalSex === sex
-                        ? 'bg-purple-950/60 border-purple-500 text-purple-300'
-                        : 'bg-zinc-950 border-zinc-800 text-zinc-400'
-                    }`}
-                  >
-                    {sex}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <label className="text-xs text-zinc-400 block mb-1.5">Usage Pattern</label>
-              <div className="grid grid-cols-2 gap-1.5">
-                {(['chronic', 'binge'] as UsagePattern[]).map((pat) => (
-                  <button
-                    key={pat}
-                    onClick={() => updateInput('usagePattern', pat)}
-                    className={`py-1.5 text-xs font-mono rounded-lg border capitalize transition-all ${
-                      inputs.usagePattern === pat
-                        ? 'bg-amber-950/60 border-amber-500 text-amber-300'
-                        : 'bg-zinc-950 border-zinc-800 text-zinc-400'
-                    }`}
-                  >
-                    {pat}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-
+          {/* Biological Sex with Privacy Option */}
           <div>
-            <label className="text-xs text-zinc-400 block mb-1.5">Route of Administration (ROA)</label>
-            <div className="grid grid-cols-4 gap-1.5">
-              {(['oral', 'snort', 'smoke', 'iv'] as ROA[]).map((r) => (
+            <label className="text-xs text-zinc-400 block mb-1.5 flex items-center gap-1">
+              <Users className="w-3 h-3 text-purple-400" /> Biological Sex
+            </label>
+            <div className="grid grid-cols-3 gap-1.5">
+              {(['male', 'female', 'prefer_not_to_say'] as BiologicalSex[]).map((sex) => (
                 <button
-                  key={r}
-                  onClick={() => updateInput('roa', r)}
-                  className={`py-1.5 text-xs font-mono rounded-lg border capitalize transition-all ${
-                    inputs.roa === r
-                      ? 'bg-rose-950/60 border-rose-500 text-rose-300'
+                  key={sex}
+                  onClick={() => updateInput('biologicalSex', sex)}
+                  className={`py-1.5 text-[11px] font-mono rounded-lg border capitalize transition-all ${
+                    inputs.biologicalSex === sex
+                      ? 'bg-purple-950/60 border-purple-500 text-purple-300'
                       : 'bg-zinc-950 border-zinc-800 text-zinc-400'
                   }`}
                 >
-                  {r}
+                  {sex === 'prefer_not_to_say' ? 'Prefer Not to Answer' : sex}
                 </button>
               ))}
             </div>
           </div>
 
+          {/* Usage Pattern with Privacy Option */}
           <div>
-            <label className="text-xs text-zinc-400 block mb-1.5">Speedball Co-Use</label>
+            <label className="text-xs text-zinc-400 block mb-1.5">Usage Pattern</label>
             <div className="grid grid-cols-3 gap-1.5">
-              {(['none', 'occasional', 'chronic'] as SpeedballFreq[]).map((s) => (
+              {(['chronic', 'binge', 'prefer_not_to_say'] as UsagePattern[]).map((pat) => (
+                <button
+                  key={pat}
+                  onClick={() => updateInput('usagePattern', pat)}
+                  className={`py-1.5 text-[11px] font-mono rounded-lg border capitalize transition-all ${
+                    inputs.usagePattern === pat
+                      ? 'bg-amber-950/60 border-amber-500 text-amber-300'
+                      : 'bg-zinc-950 border-zinc-800 text-zinc-400'
+                  }`}
+                >
+                  {pat === 'prefer_not_to_say' ? 'Prefer Not to Answer' : pat}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Multi-Select ROAs (including rectal) */}
+          <div>
+            <div className="flex justify-between items-center mb-1.5">
+              <label className="text-xs text-zinc-400">Route of Administration (Select Multiple)</label>
+              <span className="text-[10px] font-mono text-rose-400">{inputs.roas.length} selected</span>
+            </div>
+            <div className="grid grid-cols-3 gap-1.5">
+              {(['oral', 'snort', 'smoke', 'rectal', 'iv'] as ROA[]).map((r) => {
+                const selected = inputs.roas.includes(r);
+                return (
+                  <button
+                    key={r}
+                    onClick={() => toggleRoa(r)}
+                    className={`py-1.5 px-2 text-xs font-mono rounded-lg border capitalize flex items-center justify-center gap-1.5 transition-all ${
+                      selected
+                        ? 'bg-rose-950/60 border-rose-500 text-rose-300'
+                        : 'bg-zinc-950 border-zinc-800 text-zinc-400'
+                    }`}
+                  >
+                    {selected ? <CheckSquare className="w-3.5 h-3.5" /> : <Square className="w-3.5 h-3.5" />}
+                    {r}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Speedball Co-Use with Privacy Option */}
+          <div>
+            <label className="text-xs text-zinc-400 block mb-1.5">Speedball Co-Use Frequency</label>
+            <div className="grid grid-cols-2 gap-1.5">
+              {(['none', 'occasional', 'chronic', 'prefer_not_to_say'] as SpeedballFreq[]).map((s) => (
                 <button
                   key={s}
                   onClick={() => updateInput('speedball', s)}
-                  className={`py-1.5 text-xs font-mono rounded-lg border capitalize transition-all ${
+                  className={`py-1.5 text-[11px] font-mono rounded-lg border capitalize transition-all ${
                     inputs.speedball === s
                       ? 'bg-amber-950/60 border-amber-500 text-amber-300'
                       : 'bg-zinc-950 border-zinc-800 text-zinc-400'
                   }`}
                 >
-                  {s}
+                  {s === 'prefer_not_to_say' ? 'Prefer Not to Answer' : s}
                 </button>
               ))}
             </div>
@@ -302,4 +324,3 @@ export default function App() {
     </div>
   );
 }
-

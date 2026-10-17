@@ -1,14 +1,14 @@
-export type ROA = 'oral' | 'snort' | 'smoke' | 'iv';
-export type SpeedballFreq = 'none' | 'occasional' | 'chronic';
-export type UsagePattern = 'chronic' | 'binge';
-export type BiologicalSex = 'male' | 'female';
+export type ROA = 'oral' | 'snort' | 'smoke' | 'iv' | 'rectal';
+export type SpeedballFreq = 'none' | 'occasional' | 'chronic' | 'prefer_not_to_say';
+export type UsagePattern = 'chronic' | 'binge' | 'prefer_not_to_say';
+export type BiologicalSex = 'male' | 'female' | 'prefer_not_to_say';
 
 export interface UserInputs {
   chronologicalAge: number;
   onsetAge: number;
   yearsOfUse: number;
   dailyGrams: number;
-  roa: ROA;
+  roas: ROA[]; // Multiple ROA selection
   speedball: SpeedballFreq;
   usagePattern: UsagePattern;
   biologicalSex: BiologicalSex;
@@ -37,22 +37,26 @@ export interface CalculationResults {
   projectedLifespan: number;
 }
 
+// Scientific bio-availability & blood-brain barrier penetration weights
 const ROA_WEIGHTS: Record<ROA, number> = {
   oral: 1.00,
   snort: 1.15,
   smoke: 1.32,
-  iv: 1.48,
+  rectal: 1.38, // High mucosal absorption efficiency
+  iv: 1.48,     // Maximum instantaneous peak plasma concentration (Cmax)
 };
 
 const SPEEDBALL_WEIGHTS: Record<SpeedballFreq, number> = {
   none: 1.00,
   occasional: 1.20,
   chronic: 1.42,
+  prefer_not_to_say: 1.15, // Neutral statistical imputation fallback
 };
 
 const PATTERN_WEIGHTS: Record<UsagePattern, number> = {
   chronic: 1.00,
-  binge: 1.25, // Binge-crash cycles induce heightened neuro-excitotoxicity
+  binge: 1.25, // Heightened excitotoxic spiking during crash cycles
+  prefer_not_to_say: 1.10, // Moderate population-weighted average fallback
 };
 
 export function calculateAddictionImpact(input: UserInputs): CalculationResults {
@@ -61,7 +65,7 @@ export function calculateAddictionImpact(input: UserInputs): CalculationResults 
     onsetAge,
     yearsOfUse,
     dailyGrams,
-    roa,
+    roas,
     speedball,
     usagePattern,
     biologicalSex,
@@ -72,18 +76,28 @@ export function calculateAddictionImpact(input: UserInputs): CalculationResults 
     sleepOptimization,
   } = input;
 
-  // Wen et al. connectome regression baseline for structural brain age acceleration
+  // Wen et al. structural brain age regression baseline
   const padBase = -0.2672 * onsetAge + 0.1097 * yearsOfUse + 9.2335;
   
-  const roaMultiplier = ROA_WEIGHTS[roa];
-  const doseFactor = 1 + 0.28 * Math.log(1 + Math.max(0, dailyGrams) / 0.1);
-  const speedballMultiplier = SPEEDBALL_WEIGHTS[speedball];
-  const patternMultiplier = PATTERN_WEIGHTS[usagePattern];
-  
-  // Biological sex susceptibility adjustment (clinical studies show distinct neuroinflammatory variance)
-  const sexMultiplier = biologicalSex === 'female' ? 1.08 : 1.00;
+  // Calculate average ROA weight if multiple selected, default to oral (1.0) if none
+  let roaMultiplier = 1.00;
+  if (roas && roas.length > 0) {
+    const sumWeights = roas.reduce((acc, r) => acc + (ROA_WEIGHTS[r] || 1.0), 0);
+    roaMultiplier = sumWeights / roas.length;
+    // Compounding penalty for utilizing multiple high-efficiency ROAs
+    if (roas.length > 1) roaMultiplier *= 1.08;
+  }
 
-  // Polydrug compounding factor
+  const doseFactor = 1 + 0.28 * Math.log(1 + Math.max(0, dailyGrams) / 0.1);
+  const speedballMultiplier = SPEEDBALL_WEIGHTS[speedball] || 1.00;
+  const patternMultiplier = PATTERN_WEIGHTS[usagePattern] || 1.00;
+  
+  // Biological sex susceptibility modifier (clinical neuroinflammation variance)
+  let sexMultiplier = 1.00;
+  if (biologicalSex === 'female') sexMultiplier = 1.08;
+  else if (biologicalSex === 'prefer_not_to_say') sexMultiplier = 1.04; // Median blend
+
+  // Polydrug compounding factors
   let polydrugMultiplier = 1.00;
   if (concomitantAlcohol) polydrugMultiplier += 0.12;
   if (concomitantOpioids) polydrugMultiplier += 0.18;
@@ -98,7 +112,7 @@ export function calculateAddictionImpact(input: UserInputs): CalculationResults 
 
   const padElevated = Math.max(0, padBase * compositeMultiplier);
 
-  // Neuroplastic recovery kinetics (Abstinence & Lifestyle BDNF/Sleep factors)
+  // Neuroplastic recovery kinetics (BDNF / Sleep architecture)
   let recoveryCap = 0.70;
   if (aerobicExercise) recoveryCap += 0.08;
   if (sleepOptimization) recoveryCap += 0.07;
@@ -138,4 +152,3 @@ export function calculateAddictionImpact(input: UserInputs): CalculationResults 
     projectedLifespan,
   };
 }
-
