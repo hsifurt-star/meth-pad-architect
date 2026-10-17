@@ -1,0 +1,4919 @@
+{
+  "source": "PsychonautWiki semantic substance data",
+  "sourceUrl": "https://api.psychonautwiki.org/",
+  "copyrightUrl": "https://psychonautwiki.org/wiki/Copyrights",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "retrievedAt": "2026-10-17T20:41:26.680Z",
+  "recordCount": 373,
+  "attribution": "Substance names, class metadata, and reported route labels adapted from PsychonautWiki semantic data. Used under CC BY 4.0 with attribution; no endorsement implied.",
+  "records": [
+    {
+      "id": "1-3-butanediol",
+      "name": "1,3-Butanediol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/1%2C3-Butanediol",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "1-4-butanediol",
+      "name": "1,4-Butanediol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/1%2C4-Butanediol",
+      "chemicalClasses": [
+        "Alkanediol",
+        "Diol"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "1b-lsd",
+      "name": "1B-LSD",
+      "sourceUrl": "https://psychonautwiki.org/wiki/1B-LSD",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "1cp-al-lad",
+      "name": "1cP-AL-LAD",
+      "sourceUrl": "https://psychonautwiki.org/wiki/1cP-AL-LAD",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "1cp-lsd",
+      "name": "1cP-LSD",
+      "sourceUrl": "https://psychonautwiki.org/wiki/1cP-LSD",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "1cp-mipla",
+      "name": "1cP-MiPLA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/1cP-MiPLA",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "1p-eth-lad",
+      "name": "1P-ETH-LAD",
+      "sourceUrl": "https://psychonautwiki.org/wiki/1P-ETH-LAD",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "1p-lsd",
+      "name": "1P-LSD",
+      "sourceUrl": "https://psychonautwiki.org/wiki/1P-LSD",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "1v-lsd",
+      "name": "1V-LSD",
+      "sourceUrl": "https://psychonautwiki.org/wiki/1V-LSD",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "2-aminoindane",
+      "name": "2-Aminoindane",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2-Aminoindane",
+      "chemicalClasses": [
+        "Aminoindane"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "2-fa",
+      "name": "2-FA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2-FA",
+      "chemicalClasses": [
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "2-fea",
+      "name": "2-FEA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2-FEA",
+      "chemicalClasses": [
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated"
+      ]
+    },
+    {
+      "id": "2-fluorodeschloroketamine",
+      "name": "2-Fluorodeschloroketamine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2-Fluorodeschloroketamine",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "2-fma",
+      "name": "2-FMA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2-FMA",
+      "chemicalClasses": [
+        "Amphetamine",
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "2-5-dma",
+      "name": "2,5-DMA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2%2C5-DMA",
+      "chemicalClasses": [
+        "Amphetamine"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "25b-nboh",
+      "name": "25B-NBOH",
+      "sourceUrl": "https://psychonautwiki.org/wiki/25B-NBOH",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": []
+    },
+    {
+      "id": "25b-nbome",
+      "name": "25B-NBOMe",
+      "sourceUrl": "https://psychonautwiki.org/wiki/25B-NBOMe",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "sublingual"
+      ]
+    },
+    {
+      "id": "25c-nboh",
+      "name": "25C-NBOH",
+      "sourceUrl": "https://psychonautwiki.org/wiki/25C-NBOH",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "sublingual"
+      ]
+    },
+    {
+      "id": "25c-nbome",
+      "name": "25C-NBOMe",
+      "sourceUrl": "https://psychonautwiki.org/wiki/25C-NBOMe",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "sublingual"
+      ]
+    },
+    {
+      "id": "25d-nbome",
+      "name": "25D-NBOMe",
+      "sourceUrl": "https://psychonautwiki.org/wiki/25D-NBOMe",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "sublingual"
+      ]
+    },
+    {
+      "id": "25e-nboh",
+      "name": "25E-NBOH",
+      "sourceUrl": "https://psychonautwiki.org/wiki/25E-NBOH",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "sublingual"
+      ]
+    },
+    {
+      "id": "25i-nboh",
+      "name": "25I-NBOH",
+      "sourceUrl": "https://psychonautwiki.org/wiki/25I-NBOH",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "sublingual"
+      ]
+    },
+    {
+      "id": "25i-nbome",
+      "name": "25I-NBOMe",
+      "sourceUrl": "https://psychonautwiki.org/wiki/25I-NBOMe",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "sublingual"
+      ]
+    },
+    {
+      "id": "25n-nbome",
+      "name": "25N-NBOMe",
+      "sourceUrl": "https://psychonautwiki.org/wiki/25N-NBOMe",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "sublingual"
+      ]
+    },
+    {
+      "id": "25x-nboh",
+      "name": "25x-NBOH",
+      "sourceUrl": "https://psychonautwiki.org/wiki/25x-NBOH",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "25x-nbome",
+      "name": "25x-NBOMe",
+      "sourceUrl": "https://psychonautwiki.org/wiki/25x-NBOMe",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "2c-b",
+      "name": "2C-B",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2C-B",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "intravenous",
+        "oral",
+        "rectal"
+      ]
+    },
+    {
+      "id": "2c-b-fly",
+      "name": "2C-B-FLY",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2C-B-FLY",
+      "chemicalClasses": [
+        "Substituted phenethylamines",
+        "Substituted benzofurans"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "2c-c",
+      "name": "2C-C",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2C-C",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "2c-d",
+      "name": "2C-D",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2C-D",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "2c-e",
+      "name": "2C-E",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2C-E",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "2c-h",
+      "name": "2C-H",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2C-H",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic",
+        "Stimulants"
+      ],
+      "reportedRoutes": []
+    },
+    {
+      "id": "2c-i",
+      "name": "2C-I",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2C-I",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "2c-p",
+      "name": "2C-P",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2C-P",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "2c-t",
+      "name": "2C-T",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2C-T",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "2c-t-2",
+      "name": "2C-T-2",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2C-T-2",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "2c-t-21",
+      "name": "2C-T-21",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2C-T-21",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "2c-t-7",
+      "name": "2C-T-7",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2C-T-7",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "2c-t-x",
+      "name": "2C-T-x",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2C-T-x",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "2c-x",
+      "name": "2C-x",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2C-x",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "2m2b",
+      "name": "2M2B",
+      "sourceUrl": "https://psychonautwiki.org/wiki/2M2B",
+      "chemicalClasses": [
+        "Alcohol"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "3-cl-pcp",
+      "name": "3-Cl-PCP",
+      "sourceUrl": "https://psychonautwiki.org/wiki/3-Cl-PCP",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": []
+    },
+    {
+      "id": "3-fa",
+      "name": "3-FA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/3-FA",
+      "chemicalClasses": [
+        "Amphetamine",
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "3-fea",
+      "name": "3-FEA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/3-FEA",
+      "chemicalClasses": [
+        "Amphetamine",
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "3-fma",
+      "name": "3-FMA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/3-FMA",
+      "chemicalClasses": [
+        "Amphetamine",
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "3-fpm",
+      "name": "3-FPM",
+      "sourceUrl": "https://psychonautwiki.org/wiki/3-FPM",
+      "chemicalClasses": [
+        "Substituted amphetamines",
+        "Phenylmorpholine"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "3-ho-pce",
+      "name": "3-HO-PCE",
+      "sourceUrl": "https://psychonautwiki.org/wiki/3-HO-PCE",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "3-ho-pcp",
+      "name": "3-HO-PCP",
+      "sourceUrl": "https://psychonautwiki.org/wiki/3-HO-PCP",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "3-meo-pce",
+      "name": "3-MeO-PCE",
+      "sourceUrl": "https://psychonautwiki.org/wiki/3-MeO-PCE",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "3-meo-pcmo",
+      "name": "3-MeO-PCMo",
+      "sourceUrl": "https://psychonautwiki.org/wiki/3-MeO-PCMo",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "3-meo-pcp",
+      "name": "3-MeO-PCP",
+      "sourceUrl": "https://psychonautwiki.org/wiki/3-MeO-PCP",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "3-mmc",
+      "name": "3-MMC",
+      "sourceUrl": "https://psychonautwiki.org/wiki/3-MMC",
+      "chemicalClasses": [
+        "Cathinone"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "intravenous",
+        "oral"
+      ]
+    },
+    {
+      "id": "3-4-ctmp",
+      "name": "3,4-CTMP",
+      "sourceUrl": "https://psychonautwiki.org/wiki/3%2C4-CTMP",
+      "chemicalClasses": [
+        "Substituted phenidates"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "3c-e",
+      "name": "3C-E",
+      "sourceUrl": "https://psychonautwiki.org/wiki/3C-E",
+      "chemicalClasses": [
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "3c-p",
+      "name": "3C-P",
+      "sourceUrl": "https://psychonautwiki.org/wiki/3C-P",
+      "chemicalClasses": [
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "4-aco-det",
+      "name": "4-AcO-DET",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-AcO-DET",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "4-aco-dipt",
+      "name": "4-AcO-DiPT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-AcO-DiPT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "4-aco-dmt",
+      "name": "4-AcO-DMT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-AcO-DMT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "4-aco-met",
+      "name": "4-AcO-MET",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-AcO-MET",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "4-aco-mipt",
+      "name": "4-AcO-MiPT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-AcO-MiPT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "4-bmc",
+      "name": "4-BMC",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-BMC",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "4-fa",
+      "name": "4-FA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-FA",
+      "chemicalClasses": [
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "4-fma",
+      "name": "4-FMA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-FMA",
+      "chemicalClasses": [
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "4-ho-det",
+      "name": "4-HO-DET",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-HO-DET",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "4-ho-dipt",
+      "name": "4-HO-DiPT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-HO-DiPT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "4-ho-dpt",
+      "name": "4-HO-DPT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-HO-DPT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "4-ho-ept",
+      "name": "4-HO-EPT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-HO-EPT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "4-ho-met",
+      "name": "4-HO-MET",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-HO-MET",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "4-ho-mipt",
+      "name": "4-HO-MiPT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-HO-MiPT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "4-ho-mpt",
+      "name": "4-HO-MPT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-HO-MPT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "4-meo-pcp",
+      "name": "4-MeO-PCP",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4-MeO-PCP",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "4f-eph",
+      "name": "4F-EPH",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4F-EPH",
+      "chemicalClasses": [
+        "Substituted phenidates"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "4f-mph",
+      "name": "4F-MPH",
+      "sourceUrl": "https://psychonautwiki.org/wiki/4F-MPH",
+      "chemicalClasses": [
+        "Substituted phenidates"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "5-apb",
+      "name": "5-APB",
+      "sourceUrl": "https://psychonautwiki.org/wiki/5-APB",
+      "chemicalClasses": [
+        "Substituted amphetamines",
+        "Substituted benzofurans"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "5-hydroxytryptophan",
+      "name": "5-Hydroxytryptophan",
+      "sourceUrl": "https://psychonautwiki.org/wiki/5-Hydroxytryptophan",
+      "chemicalClasses": [
+        "Substituted tryptamines",
+        "Amino acid"
+      ],
+      "psychoactiveClasses": [
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "5-mapb",
+      "name": "5-MAPB",
+      "sourceUrl": "https://psychonautwiki.org/wiki/5-MAPB",
+      "chemicalClasses": [
+        "Substituted amphetamines",
+        "Substituted benzofurans"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "5-meo-dalt",
+      "name": "5-MeO-DALT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/5-MeO-DALT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "5-meo-dibf",
+      "name": "5-MeO-DiBF",
+      "sourceUrl": "https://psychonautwiki.org/wiki/5-MeO-DiBF",
+      "chemicalClasses": [
+        "Substituted benzofurans"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "5-meo-dipt",
+      "name": "5-MeO-DiPT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/5-MeO-DiPT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "5-meo-dmt",
+      "name": "5-MeO-DMT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/5-MeO-DMT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "smoked"
+      ]
+    },
+    {
+      "id": "5-meo-mipt",
+      "name": "5-MeO-MiPT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/5-MeO-MiPT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic",
+        "Entactogen"
+      ],
+      "reportedRoutes": [
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "5f-akb48",
+      "name": "5F-AKB48",
+      "sourceUrl": "https://psychonautwiki.org/wiki/5F-AKB48",
+      "chemicalClasses": [
+        "Indazolecarboxamide",
+        "Adamantanes"
+      ],
+      "psychoactiveClasses": [
+        "Cannabinoid"
+      ],
+      "reportedRoutes": [
+        "smoked"
+      ]
+    },
+    {
+      "id": "5f-pb-22",
+      "name": "5F-PB-22",
+      "sourceUrl": "https://psychonautwiki.org/wiki/5F-PB-22",
+      "chemicalClasses": [
+        "Indolecarboxylate"
+      ],
+      "psychoactiveClasses": [
+        "Cannabinoid"
+      ],
+      "reportedRoutes": [
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "6-apb",
+      "name": "6-APB",
+      "sourceUrl": "https://psychonautwiki.org/wiki/6-APB",
+      "chemicalClasses": [
+        "Substituted amphetamines",
+        "Substituted benzofurans"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic",
+        "Entactogen"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "6-apdb",
+      "name": "6-APDB",
+      "sourceUrl": "https://psychonautwiki.org/wiki/6-APDB",
+      "chemicalClasses": [
+        "Substituted amphetamines",
+        "Substituted phenethylamines",
+        "Substituted benzofurans"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "8-chlorotheophylline",
+      "name": "8-Chlorotheophylline",
+      "sourceUrl": "https://psychonautwiki.org/wiki/8-Chlorotheophylline",
+      "chemicalClasses": [
+        "Xanthines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": []
+    },
+    {
+      "id": "a-php",
+      "name": "A-PHP",
+      "sourceUrl": "https://psychonautwiki.org/wiki/A-PHP",
+      "chemicalClasses": [
+        "Cathinone",
+        "Substituted cathinones",
+        "Substituted pyrrolidines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "a-pvp",
+      "name": "A-PVP",
+      "sourceUrl": "https://psychonautwiki.org/wiki/A-PVP",
+      "chemicalClasses": [
+        "Cathinone",
+        "Substituted cathinones",
+        "Substituted pyrrolidines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "ab-fubinaca",
+      "name": "AB-FUBINACA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/AB-FUBINACA",
+      "chemicalClasses": [
+        "Indazolecarboxamide"
+      ],
+      "psychoactiveClasses": [
+        "Cannabinoid"
+      ],
+      "reportedRoutes": [
+        "smoked"
+      ]
+    },
+    {
+      "id": "acetylfentanyl",
+      "name": "Acetylfentanyl",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Acetylfentanyl",
+      "chemicalClasses": [
+        "Anilidopiperidine"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "sublingual"
+      ]
+    },
+    {
+      "id": "adrafinil",
+      "name": "Adrafinil",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Adrafinil",
+      "chemicalClasses": [
+        "Benzhydryl"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants",
+        "Nootropic",
+        "Eugeroics"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "al-lad",
+      "name": "AL-LAD",
+      "sourceUrl": "https://psychonautwiki.org/wiki/AL-LAD",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "alcohol",
+      "name": "Alcohol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Alcohol",
+      "chemicalClasses": [
+        "Alcohol"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "ald-52",
+      "name": "ALD-52",
+      "sourceUrl": "https://psychonautwiki.org/wiki/ALD-52",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "allylescaline",
+      "name": "Allylescaline",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Allylescaline",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "alpha-gpc",
+      "name": "Alpha-GPC",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Alpha-GPC",
+      "chemicalClasses": [
+        "Choline derivative"
+      ],
+      "psychoactiveClasses": [
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "alprazolam",
+      "name": "Alprazolam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Alprazolam",
+      "chemicalClasses": [
+        "Benzodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "inhaled",
+        "oral"
+      ]
+    },
+    {
+      "id": "amanita-muscaria",
+      "name": "Amanita muscaria",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Amanita%20muscaria",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "amphetamine",
+      "name": "Amphetamine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Amphetamine",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "intravenous",
+        "oral"
+      ]
+    },
+    {
+      "id": "amphetamine-disambiguation",
+      "name": "Amphetamine (disambiguation)",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Amphetamine%20%28disambiguation%29",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "anadenanthera-peregrina",
+      "name": "Anadenanthera peregrina",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Anadenanthera%20peregrina",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "aniracetam",
+      "name": "Aniracetam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Aniracetam",
+      "chemicalClasses": [
+        "Racetams"
+      ],
+      "psychoactiveClasses": [
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "antidepressants",
+      "name": "Antidepressants",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Antidepressants",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "antihistamine",
+      "name": "Antihistamine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Antihistamine",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "antipsychotic",
+      "name": "Antipsychotic",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Antipsychotic",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "apica",
+      "name": "APICA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/APICA",
+      "chemicalClasses": [
+        "Indolecarboxamide",
+        "Indole cannabinoid"
+      ],
+      "psychoactiveClasses": [
+        "Cannabinoid"
+      ],
+      "reportedRoutes": [
+        "smoked"
+      ]
+    },
+    {
+      "id": "armodafinil",
+      "name": "Armodafinil",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Armodafinil",
+      "chemicalClasses": [
+        "Benzhydryl"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants",
+        "Eugeroics"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "arylcyclohexylamines",
+      "name": "Arylcyclohexylamines",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Arylcyclohexylamines",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "atropa-belladonna",
+      "name": "Atropa belladonna",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Atropa%20belladonna",
+      "chemicalClasses": [
+        "Substituted tropanes"
+      ],
+      "psychoactiveClasses": [
+        "Deliriant"
+      ],
+      "reportedRoutes": []
+    },
+    {
+      "id": "ayahuasca",
+      "name": "Ayahuasca",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Ayahuasca",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "baclofen",
+      "name": "Baclofen",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Baclofen",
+      "chemicalClasses": [
+        "Butyric acid",
+        "Gabapentinoids"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "banisteriopsis-caapi",
+      "name": "Banisteriopsis caapi",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Banisteriopsis%20caapi",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "barbiturates",
+      "name": "Barbiturates",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Barbiturates",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "benzodiazepines",
+      "name": "Benzodiazepines",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Benzodiazepines",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "benzydamine",
+      "name": "Benzydamine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Benzydamine",
+      "chemicalClasses": [
+        "Indazole"
+      ],
+      "psychoactiveClasses": [
+        "Deliriant",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "beta-carboline",
+      "name": "Beta-Carboline",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Beta-Carboline",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "blue-lotus",
+      "name": "Blue Lotus",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Blue%20Lotus",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": [
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "bromantane",
+      "name": "Bromantane",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Bromantane",
+      "chemicalClasses": [
+        "Adamantanes"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants",
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "bromazepam",
+      "name": "Bromazepam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Bromazepam",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "bromo-dragonfly",
+      "name": "Bromo-DragonFLY",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Bromo-DragonFLY",
+      "chemicalClasses": [
+        "Substituted amphetamines",
+        "Substituted benzofurans"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "bufotenin",
+      "name": "Bufotenin",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Bufotenin",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "smoked"
+      ]
+    },
+    {
+      "id": "buprenorphine",
+      "name": "Buprenorphine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Buprenorphine",
+      "chemicalClasses": [
+        "Substituted morphinans"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "sublingual"
+      ]
+    },
+    {
+      "id": "buspirone",
+      "name": "Buspirone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Buspirone",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "butylone",
+      "name": "Butylone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Butylone",
+      "chemicalClasses": [
+        "MDxx",
+        "Cathinone",
+        "Substituted cathinones"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "caffeine",
+      "name": "Caffeine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Caffeine",
+      "chemicalClasses": [
+        "Xanthines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "cake",
+      "name": "Cake",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Cake",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "cannabidiol",
+      "name": "Cannabidiol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Cannabidiol",
+      "chemicalClasses": [
+        "Cannabinoid"
+      ],
+      "psychoactiveClasses": [
+        "Cannabinoid"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "cannabinoid",
+      "name": "Cannabinoid",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Cannabinoid",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "cannabis",
+      "name": "Cannabis",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Cannabis",
+      "chemicalClasses": [
+        "Cannabinoid"
+      ],
+      "psychoactiveClasses": [],
+      "reportedRoutes": [
+        "oral",
+        "smoked",
+        "sublingual"
+      ]
+    },
+    {
+      "id": "carisoprodol",
+      "name": "Carisoprodol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Carisoprodol",
+      "chemicalClasses": [
+        "1,3-Propanediol dicarbamate"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "cathinone",
+      "name": "Cathinone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Cathinone",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "changa",
+      "name": "Changa",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Changa",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "choline-bitartrate",
+      "name": "Choline bitartrate",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Choline%20bitartrate",
+      "chemicalClasses": [
+        "Ammonium salt"
+      ],
+      "psychoactiveClasses": [
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "citicoline",
+      "name": "Citicoline",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Citicoline",
+      "chemicalClasses": [
+        "Ammonium salt"
+      ],
+      "psychoactiveClasses": [
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "classical-psychedelics",
+      "name": "Classical psychedelics",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Classical%20psychedelics",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "clonazepam",
+      "name": "Clonazepam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Clonazepam",
+      "chemicalClasses": [
+        "Benzodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "clonazolam",
+      "name": "Clonazolam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Clonazolam",
+      "chemicalClasses": [
+        "Benzodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "clonidine",
+      "name": "Clonidine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Clonidine",
+      "chemicalClasses": [
+        "Imidazoline",
+        "Arylaminoimidazoline"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "coca",
+      "name": "Coca",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Coca",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "cocaine",
+      "name": "Cocaine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Cocaine",
+      "chemicalClasses": [
+        "Substituted tropanes"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "intravenous",
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "cocoa",
+      "name": "Cocoa",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Cocoa",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "codeine",
+      "name": "Codeine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Codeine",
+      "chemicalClasses": [
+        "Substituted morphinans"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "coluracetam",
+      "name": "Coluracetam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Coluracetam",
+      "chemicalClasses": [
+        "Racetams"
+      ],
+      "psychoactiveClasses": [
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "creatine",
+      "name": "Creatine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Creatine",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "cyclazodone",
+      "name": "Cyclazodone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Cyclazodone",
+      "chemicalClasses": [
+        "Substituted aminorexes",
+        "4-oxazolidinone"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "datura",
+      "name": "Datura",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Datura",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [
+        "Deliriant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "datura-botany",
+      "name": "Datura (botany)",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Datura%20%28botany%29",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "deliriant",
+      "name": "Deliriant",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Deliriant",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "depressant",
+      "name": "Depressant",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Depressant",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "deschloroetizolam",
+      "name": "Deschloroetizolam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Deschloroetizolam",
+      "chemicalClasses": [
+        "Thienodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "deschloroketamine",
+      "name": "Deschloroketamine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Deschloroketamine",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "desomorphine",
+      "name": "Desomorphine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Desomorphine",
+      "chemicalClasses": [
+        "Substituted morphinans"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "desoxypipradrol",
+      "name": "Desoxypipradrol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Desoxypipradrol",
+      "chemicalClasses": [
+        "Substituted piperidines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "det",
+      "name": "DET",
+      "sourceUrl": "https://psychonautwiki.org/wiki/DET",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "dextroamphetamine",
+      "name": "Dextroamphetamine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Dextroamphetamine",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "dextromethorphan",
+      "name": "Dextromethorphan",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Dextromethorphan",
+      "chemicalClasses": [
+        "Substituted morphinans"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "dextropropoxyphene",
+      "name": "Dextropropoxyphene",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Dextropropoxyphene",
+      "chemicalClasses": [
+        "Phenylpropylamine"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "diarylethylamines",
+      "name": "Diarylethylamines",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Diarylethylamines",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "diazepam",
+      "name": "Diazepam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Diazepam",
+      "chemicalClasses": [
+        "Benzodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "dichloropane",
+      "name": "Dichloropane",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Dichloropane",
+      "chemicalClasses": [
+        "Substituted tropanes"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "smoked"
+      ]
+    },
+    {
+      "id": "diclazepam",
+      "name": "Diclazepam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Diclazepam",
+      "chemicalClasses": [
+        "Benzodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "dihydrocodeine",
+      "name": "Dihydrocodeine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Dihydrocodeine",
+      "chemicalClasses": [
+        "Substituted morphinans"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "diphenhydramine",
+      "name": "Diphenhydramine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Diphenhydramine",
+      "chemicalClasses": [
+        "Ethanolamine"
+      ],
+      "psychoactiveClasses": [
+        "Deliriant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "diphenidine",
+      "name": "Diphenidine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Diphenidine",
+      "chemicalClasses": [
+        "Diarylethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "oral",
+        "rectal",
+        "smoked"
+      ]
+    },
+    {
+      "id": "dipt",
+      "name": "DiPT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/DiPT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "dissociatives",
+      "name": "Dissociatives",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Dissociatives",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "dmt",
+      "name": "DMT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/DMT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "intravenous",
+        "smoked"
+      ]
+    },
+    {
+      "id": "dob",
+      "name": "DOB",
+      "sourceUrl": "https://psychonautwiki.org/wiki/DOB",
+      "chemicalClasses": [
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "doc",
+      "name": "DOC",
+      "sourceUrl": "https://psychonautwiki.org/wiki/DOC",
+      "chemicalClasses": [
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "doi",
+      "name": "DOI",
+      "sourceUrl": "https://psychonautwiki.org/wiki/DOI",
+      "chemicalClasses": [
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "dom",
+      "name": "DOM",
+      "sourceUrl": "https://psychonautwiki.org/wiki/DOM",
+      "chemicalClasses": [
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "dox",
+      "name": "DOx",
+      "sourceUrl": "https://psychonautwiki.org/wiki/DOx",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "dpt",
+      "name": "DPT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/DPT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "efavirenz",
+      "name": "Efavirenz",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Efavirenz",
+      "chemicalClasses": [
+        "Benzoxazine"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "smoked"
+      ]
+    },
+    {
+      "id": "entactogen",
+      "name": "Entactogen",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Entactogen",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "entheogen",
+      "name": "Entheogen",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Entheogen",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "ephedrine",
+      "name": "Ephedrine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Ephedrine",
+      "chemicalClasses": [
+        "Amphetamine"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "ephenidine",
+      "name": "Ephenidine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Ephenidine",
+      "chemicalClasses": [
+        "Diarylethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "ephylone",
+      "name": "Ephylone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Ephylone",
+      "chemicalClasses": [
+        "Cathinone"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "ept",
+      "name": "EPT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/EPT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "insufflated"
+      ]
+    },
+    {
+      "id": "escaline",
+      "name": "Escaline",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Escaline",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "eszopiclone",
+      "name": "Eszopiclone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Eszopiclone",
+      "chemicalClasses": [
+        "Cyclopyrrolone"
+      ],
+      "psychoactiveClasses": [
+        "Hallucinogens",
+        "Depressant",
+        "Hypnotic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "eth-cat",
+      "name": "ETH-CAT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/ETH-CAT",
+      "chemicalClasses": [
+        "Cathinone"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "eth-lad",
+      "name": "ETH-LAD",
+      "sourceUrl": "https://psychonautwiki.org/wiki/ETH-LAD",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "ethylmorphine",
+      "name": "Ethylmorphine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Ethylmorphine",
+      "chemicalClasses": [
+        "Substituted morphinans"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "ethylone",
+      "name": "Ethylone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Ethylone",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "ethylphenidate",
+      "name": "Ethylphenidate",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Ethylphenidate",
+      "chemicalClasses": [
+        "Substituted phenidates"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral",
+        "rectal"
+      ]
+    },
+    {
+      "id": "etizolam",
+      "name": "Etizolam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Etizolam",
+      "chemicalClasses": [
+        "Thienodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "eugeroics",
+      "name": "Eugeroics",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Eugeroics",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "f-phenibut",
+      "name": "F-Phenibut",
+      "sourceUrl": "https://psychonautwiki.org/wiki/F-Phenibut",
+      "chemicalClasses": [
+        "Gabapentinoids"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "fenethylline",
+      "name": "Fenethylline",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Fenethylline",
+      "chemicalClasses": [
+        "Amphetamine",
+        "Substituted amphetamines",
+        "Xanthines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "fentanyl",
+      "name": "Fentanyl",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Fentanyl",
+      "chemicalClasses": [
+        "Anilidopiperidine",
+        "Substituted piperidines"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "sublingual",
+        "transdermal"
+      ]
+    },
+    {
+      "id": "flualprazolam",
+      "name": "Flualprazolam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Flualprazolam",
+      "chemicalClasses": [
+        "Benzodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "flubromazepam",
+      "name": "Flubromazepam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Flubromazepam",
+      "chemicalClasses": [
+        "Benzodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "flubromazolam",
+      "name": "Flubromazolam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Flubromazolam",
+      "chemicalClasses": [
+        "Benzodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "flunitrazepam",
+      "name": "Flunitrazepam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Flunitrazepam",
+      "chemicalClasses": [
+        "Benzodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "flunitrazolam",
+      "name": "Flunitrazolam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Flunitrazolam",
+      "chemicalClasses": [
+        "Benzodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "gabapentin",
+      "name": "Gabapentin",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Gabapentin",
+      "chemicalClasses": [
+        "Gabapentinoids"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "gaboxadol",
+      "name": "Gaboxadol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Gaboxadol",
+      "chemicalClasses": [
+        "3-hydroxyisoxazole",
+        "3-Hydroxyisoxazole"
+      ],
+      "psychoactiveClasses": [
+        "Hallucinogens",
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "galantamine",
+      "name": "Galantamine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Galantamine",
+      "chemicalClasses": [
+        "Benzazepine"
+      ],
+      "psychoactiveClasses": [
+        "Oneirogen",
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "gbl",
+      "name": "GBL",
+      "sourceUrl": "https://psychonautwiki.org/wiki/GBL",
+      "chemicalClasses": [
+        "Lactone"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "ghb",
+      "name": "GHB",
+      "sourceUrl": "https://psychonautwiki.org/wiki/GHB",
+      "chemicalClasses": [
+        "Γ-Hydroxy acid"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "grayanotoxin",
+      "name": "Grayanotoxin",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Grayanotoxin",
+      "chemicalClasses": [
+        "Diterpene"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "hallucinogens",
+      "name": "Hallucinogens",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Hallucinogens",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "haloperidol",
+      "name": "Haloperidol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Haloperidol",
+      "chemicalClasses": [
+        "Substituted piperidines",
+        "Butyrophenone"
+      ],
+      "psychoactiveClasses": [
+        "Antipsychotic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "harmala-alkaloid",
+      "name": "Harmala alkaloid",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Harmala%20alkaloid",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "heroin",
+      "name": "Heroin",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Heroin",
+      "chemicalClasses": [
+        "Substituted morphinans"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "intravenous",
+        "smoked"
+      ]
+    },
+    {
+      "id": "hexedrone",
+      "name": "Hexedrone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Hexedrone",
+      "chemicalClasses": [
+        "Cathinone"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "hxe",
+      "name": "HXE",
+      "sourceUrl": "https://psychonautwiki.org/wiki/HXE",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral",
+        "sublingual"
+      ]
+    },
+    {
+      "id": "hydrocodone",
+      "name": "Hydrocodone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Hydrocodone",
+      "chemicalClasses": [
+        "Substituted morphinans"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "hydromorphone",
+      "name": "Hydromorphone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Hydromorphone",
+      "chemicalClasses": [
+        "Substituted morphinans"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "intravenous",
+        "oral"
+      ]
+    },
+    {
+      "id": "hyoscyamus-niger-botany",
+      "name": "Hyoscyamus niger (botany)",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Hyoscyamus%20niger%20%28botany%29",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "hypnotic",
+      "name": "Hypnotic",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Hypnotic",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "ibogaine",
+      "name": "Ibogaine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Ibogaine",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "ibotenic-acid",
+      "name": "Ibotenic acid",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Ibotenic%20acid",
+      "chemicalClasses": [
+        "3-Hydroxyisoxazole",
+        "Α-Amino acid"
+      ],
+      "psychoactiveClasses": [
+        "Hallucinogens"
+      ],
+      "reportedRoutes": []
+    },
+    {
+      "id": "inhalants",
+      "name": "Inhalants",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Inhalants",
+      "chemicalClasses": [
+        "Inorganic molecule"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": []
+    },
+    {
+      "id": "isopropylphenidate",
+      "name": "Isopropylphenidate",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Isopropylphenidate",
+      "chemicalClasses": [
+        "Substituted phenidates"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "jwh-018",
+      "name": "JWH-018",
+      "sourceUrl": "https://psychonautwiki.org/wiki/JWH-018",
+      "chemicalClasses": [
+        "Naphthoylindole"
+      ],
+      "psychoactiveClasses": [
+        "Cannabinoid"
+      ],
+      "reportedRoutes": [
+        "smoked"
+      ]
+    },
+    {
+      "id": "jwh-073",
+      "name": "JWH-073",
+      "sourceUrl": "https://psychonautwiki.org/wiki/JWH-073",
+      "chemicalClasses": [
+        "Naphthoylindole"
+      ],
+      "psychoactiveClasses": [
+        "Cannabinoid"
+      ],
+      "reportedRoutes": [
+        "smoked"
+      ]
+    },
+    {
+      "id": "kava",
+      "name": "Kava",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Kava",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "ketamine",
+      "name": "Ketamine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Ketamine",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral",
+        "sublingual"
+      ]
+    },
+    {
+      "id": "kratom",
+      "name": "Kratom",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Kratom",
+      "chemicalClasses": [
+        "Indole alkaloids"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants",
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "lae-32",
+      "name": "LAE-32",
+      "sourceUrl": "https://psychonautwiki.org/wiki/LAE-32",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "lisdexamfetamine",
+      "name": "Lisdexamfetamine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Lisdexamfetamine",
+      "chemicalClasses": [
+        "Amphetamine",
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "lorazepam",
+      "name": "Lorazepam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Lorazepam",
+      "chemicalClasses": [
+        "Benzodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "lsa",
+      "name": "LSA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/LSA",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral",
+        "sublingual"
+      ]
+    },
+    {
+      "id": "lsd",
+      "name": "LSD",
+      "sourceUrl": "https://psychonautwiki.org/wiki/LSD",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "sublingual"
+      ]
+    },
+    {
+      "id": "lsm-775",
+      "name": "LSM-775",
+      "sourceUrl": "https://psychonautwiki.org/wiki/LSM-775",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "lsz",
+      "name": "LSZ",
+      "sourceUrl": "https://psychonautwiki.org/wiki/LSZ",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "lysergamides",
+      "name": "Lysergamides",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Lysergamides",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "mandragora",
+      "name": "Mandragora",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Mandragora",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "mandragora-officinarum-botany",
+      "name": "Mandragora officinarum (botany)",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Mandragora%20officinarum%20%28botany%29",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "maoi",
+      "name": "MAOI",
+      "sourceUrl": "https://psychonautwiki.org/wiki/MAOI",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "mcpp",
+      "name": "MCPP",
+      "sourceUrl": "https://psychonautwiki.org/wiki/MCPP",
+      "chemicalClasses": [
+        "Substituted piperazines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "mda",
+      "name": "MDA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/MDA",
+      "chemicalClasses": [
+        "Amphetamine"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic",
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "mdai",
+      "name": "MDAI",
+      "sourceUrl": "https://psychonautwiki.org/wiki/MDAI",
+      "chemicalClasses": [
+        "Aminoindane"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "mdea",
+      "name": "MDEA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/MDEA",
+      "chemicalClasses": [
+        "Amphetamine",
+        "MDxx",
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "mdma",
+      "name": "MDMA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/MDMA",
+      "chemicalClasses": [
+        "Amphetamine",
+        "MDxx",
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "mdpv",
+      "name": "MDPV",
+      "sourceUrl": "https://psychonautwiki.org/wiki/MDPV",
+      "chemicalClasses": [
+        "MDxx",
+        "Substituted cathinones",
+        "Substituted pyrrolidines"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "meclofenoxate",
+      "name": "Meclofenoxate",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Meclofenoxate",
+      "chemicalClasses": [
+        "Cholinergic"
+      ],
+      "psychoactiveClasses": [
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "melatonin",
+      "name": "Melatonin",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Melatonin",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Oneirogen"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "memantine",
+      "name": "Memantine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Memantine",
+      "chemicalClasses": [
+        "Adamantanes"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "mephedrone",
+      "name": "Mephedrone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Mephedrone",
+      "chemicalClasses": [
+        "Cathinone",
+        "Substituted cathinones"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "mephenaqualone",
+      "name": "Mephenaqualone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Mephenaqualone",
+      "chemicalClasses": [
+        "Quinazolinone"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "mescaline",
+      "name": "Mescaline",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Mescaline",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "met",
+      "name": "MET",
+      "sourceUrl": "https://psychonautwiki.org/wiki/MET",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "methadone",
+      "name": "Methadone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Methadone",
+      "chemicalClasses": [
+        "Diphenylpropylamine"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "methallylescaline",
+      "name": "Methallylescaline",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Methallylescaline",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "methamphetamine",
+      "name": "Methamphetamine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Methamphetamine",
+      "chemicalClasses": [
+        "Amphetamine",
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "intravenous",
+        "oral",
+        "rectal",
+        "smoked"
+      ]
+    },
+    {
+      "id": "methaqualone",
+      "name": "Methaqualone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Methaqualone",
+      "chemicalClasses": [
+        "Quinazolinone"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "methcathinone",
+      "name": "Methcathinone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Methcathinone",
+      "chemicalClasses": [
+        "Cathinone",
+        "Substituted cathinones"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "methiopropamine",
+      "name": "Methiopropamine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Methiopropamine",
+      "chemicalClasses": [
+        "Thiophene"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "methoxetamine",
+      "name": "Methoxetamine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Methoxetamine",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "methoxphenidine",
+      "name": "Methoxphenidine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Methoxphenidine",
+      "chemicalClasses": [
+        "Diarylethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "methylnaphthidate",
+      "name": "Methylnaphthidate",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Methylnaphthidate",
+      "chemicalClasses": [
+        "Substituted phenidates"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "methylone",
+      "name": "Methylone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Methylone",
+      "chemicalClasses": [
+        "Cathinone"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "methylphenidate",
+      "name": "Methylphenidate",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Methylphenidate",
+      "chemicalClasses": [
+        "Substituted phenidates"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "metizolam",
+      "name": "Metizolam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Metizolam",
+      "chemicalClasses": [
+        "Thienodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "mexedrone",
+      "name": "Mexedrone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Mexedrone",
+      "chemicalClasses": [
+        "Cathinone"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "midazolam",
+      "name": "Midazolam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Midazolam",
+      "chemicalClasses": [
+        "Benzodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "intravenous",
+        "oral"
+      ]
+    },
+    {
+      "id": "mipla",
+      "name": "MiPLA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/MiPLA",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "mipt",
+      "name": "MiPT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/MiPT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "mirtazapine",
+      "name": "Mirtazapine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Mirtazapine",
+      "chemicalClasses": [
+        "Piperazinoazepine"
+      ],
+      "psychoactiveClasses": [
+        "Deliriant",
+        "Depressant",
+        "Antidepressants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "modafinil",
+      "name": "Modafinil",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Modafinil",
+      "chemicalClasses": [
+        "Benzhydryl"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants",
+        "Eugeroics"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "morning-glory",
+      "name": "Morning glory",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Morning%20glory",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "morphine",
+      "name": "Morphine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Morphine",
+      "chemicalClasses": [
+        "Substituted morphinans"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "intravenous",
+        "oral"
+      ]
+    },
+    {
+      "id": "mpt",
+      "name": "MPT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/MPT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "mxipr",
+      "name": "MXiPr",
+      "sourceUrl": "https://psychonautwiki.org/wiki/MXiPr",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "myristicin",
+      "name": "Myristicin",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Myristicin",
+      "chemicalClasses": [
+        "Phenylpropenes"
+      ],
+      "psychoactiveClasses": [
+        "Deliriant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "n-2c-fentanyl",
+      "name": "N-(2C)-fentanyl",
+      "sourceUrl": "https://psychonautwiki.org/wiki/N-%282C%29-fentanyl",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "n-acetylcysteine",
+      "name": "N-Acetylcysteine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/N-Acetylcysteine",
+      "chemicalClasses": [
+        "Cysteine"
+      ],
+      "psychoactiveClasses": [
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "n-ethylhexedrone",
+      "name": "N-Ethylhexedrone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/N-Ethylhexedrone",
+      "chemicalClasses": [
+        "Cathinone"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "smoked"
+      ]
+    },
+    {
+      "id": "n-methylbisfluoromodafinil",
+      "name": "N-Methylbisfluoromodafinil",
+      "sourceUrl": "https://psychonautwiki.org/wiki/N-Methylbisfluoromodafinil",
+      "chemicalClasses": [
+        "Benzhydryl"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants",
+        "Nootropic",
+        "Eugeroics"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "naloxone",
+      "name": "Naloxone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Naloxone",
+      "chemicalClasses": [
+        "Substituted morphinans"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "intramuscular",
+        "intravenous",
+        "oral"
+      ]
+    },
+    {
+      "id": "nep",
+      "name": "NEP",
+      "sourceUrl": "https://psychonautwiki.org/wiki/NEP",
+      "chemicalClasses": [
+        "Cathinone"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "nicotine",
+      "name": "Nicotine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Nicotine",
+      "chemicalClasses": [
+        "Pyridine",
+        "Substituted pyrrolidines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "buccal",
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "nifoxipam",
+      "name": "Nifoxipam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Nifoxipam",
+      "chemicalClasses": [
+        "Benzodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "nitrous",
+      "name": "Nitrous",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Nitrous",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "inhaled"
+      ]
+    },
+    {
+      "id": "nm-2-ai",
+      "name": "NM-2-AI",
+      "sourceUrl": "https://psychonautwiki.org/wiki/NM-2-AI",
+      "chemicalClasses": [
+        "Amphetamine",
+        "Aminoindane"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "nootropic",
+      "name": "Nootropic",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Nootropic",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "o-desmethyltramadol",
+      "name": "O-Desmethyltramadol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/O-Desmethyltramadol",
+      "chemicalClasses": [
+        "Phenylpropylamine"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "intravenous",
+        "oral",
+        "sublingual"
+      ]
+    },
+    {
+      "id": "o-pce",
+      "name": "O-PCE",
+      "sourceUrl": "https://psychonautwiki.org/wiki/O-PCE",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "omberacetam",
+      "name": "Omberacetam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Omberacetam",
+      "chemicalClasses": [
+        "Peptide"
+      ],
+      "psychoactiveClasses": [
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "opioids",
+      "name": "Opioids",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Opioids",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "oxiracetam",
+      "name": "Oxiracetam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Oxiracetam",
+      "chemicalClasses": [
+        "Racetams"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants",
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "oxycodone",
+      "name": "Oxycodone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Oxycodone",
+      "chemicalClasses": [
+        "Substituted morphinans"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "intravenous",
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "oxymorphone",
+      "name": "Oxymorphone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Oxymorphone",
+      "chemicalClasses": [
+        "Substituted morphinans"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "pargy-lad",
+      "name": "PARGY-LAD",
+      "sourceUrl": "https://psychonautwiki.org/wiki/PARGY-LAD",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "pce",
+      "name": "PCE",
+      "sourceUrl": "https://psychonautwiki.org/wiki/PCE",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "pcp",
+      "name": "PCP",
+      "sourceUrl": "https://psychonautwiki.org/wiki/PCP",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "peganum-harmala",
+      "name": "Peganum harmala",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Peganum%20harmala",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "pentedrone",
+      "name": "Pentedrone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Pentedrone",
+      "chemicalClasses": [
+        "Cathinone"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "pentobarbital",
+      "name": "Pentobarbital",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Pentobarbital",
+      "chemicalClasses": [
+        "Barbiturates"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "pethidine",
+      "name": "Pethidine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Pethidine",
+      "chemicalClasses": [
+        "Substituted piperidines"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "phenethylamine-compound",
+      "name": "Phenethylamine (compound)",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Phenethylamine%20%28compound%29",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "phenibut",
+      "name": "Phenibut",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Phenibut",
+      "chemicalClasses": [
+        "Gabapentinoids"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "phenobarbital",
+      "name": "Phenobarbital",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Phenobarbital",
+      "chemicalClasses": [
+        "Barbiturates"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "phentermine",
+      "name": "Phentermine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Phentermine",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "phenylpiracetam",
+      "name": "Phenylpiracetam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Phenylpiracetam",
+      "chemicalClasses": [
+        "Racetams"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants",
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "piper-nigrum-botany",
+      "name": "Piper nigrum (botany)",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Piper%20nigrum%20%28botany%29",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "piracetam",
+      "name": "Piracetam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Piracetam",
+      "chemicalClasses": [
+        "Racetams"
+      ],
+      "psychoactiveClasses": [
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "pma",
+      "name": "PMA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/PMA",
+      "chemicalClasses": [
+        "Amphetamine",
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen",
+        "Hallucinogens"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "pmma",
+      "name": "PMMA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/PMMA",
+      "chemicalClasses": [
+        "Amphetamine",
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Entactogen"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "poppers",
+      "name": "Poppers",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Poppers",
+      "chemicalClasses": [
+        "Poppers"
+      ],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "pramiracetam",
+      "name": "Pramiracetam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Pramiracetam",
+      "chemicalClasses": [
+        "Racetams"
+      ],
+      "psychoactiveClasses": [
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "pregabalin",
+      "name": "Pregabalin",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Pregabalin",
+      "chemicalClasses": [
+        "Gabapentinoids"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral",
+        "rectal"
+      ]
+    },
+    {
+      "id": "pro-lad",
+      "name": "PRO-LAD",
+      "sourceUrl": "https://psychonautwiki.org/wiki/PRO-LAD",
+      "chemicalClasses": [
+        "Lysergamides"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "prochlorperazine",
+      "name": "Prochlorperazine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Prochlorperazine",
+      "chemicalClasses": [
+        "Phenothiazine"
+      ],
+      "psychoactiveClasses": [
+        "Antipsychotic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "progesterone",
+      "name": "Progesterone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Progesterone",
+      "chemicalClasses": [
+        "Steroid"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral",
+        "rectal"
+      ]
+    },
+    {
+      "id": "prolintane",
+      "name": "Prolintane",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Prolintane",
+      "chemicalClasses": [
+        "Amphetamine",
+        "Substituted amphetamines",
+        "Substituted pyrrolidines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "promethazine",
+      "name": "Promethazine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Promethazine",
+      "chemicalClasses": [
+        "Phenothiazine"
+      ],
+      "psychoactiveClasses": [
+        "Deliriant",
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "propylhexedrine",
+      "name": "Propylhexedrine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Propylhexedrine",
+      "chemicalClasses": [
+        "Cycloalkylamines"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "proscaline",
+      "name": "Proscaline",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Proscaline",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "psilocin",
+      "name": "Psilocin",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Psilocin",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "psilocybe-cubensis",
+      "name": "Psilocybe cubensis",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Psilocybe%20cubensis",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "psilocybin-mushrooms",
+      "name": "Psilocybin mushrooms",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Psilocybin%20mushrooms",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "psychedelic",
+      "name": "Psychedelic",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Psychedelic",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "pyrazolam",
+      "name": "Pyrazolam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Pyrazolam",
+      "chemicalClasses": [
+        "Benzodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "quetiapine",
+      "name": "Quetiapine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Quetiapine",
+      "chemicalClasses": [
+        "Dibenzothiazepine"
+      ],
+      "psychoactiveClasses": [
+        "Antipsychotic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "racetams",
+      "name": "Racetams",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Racetams",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "rima",
+      "name": "RIMA",
+      "sourceUrl": "https://psychonautwiki.org/wiki/RIMA",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "risperidone",
+      "name": "Risperidone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Risperidone",
+      "chemicalClasses": [
+        "Benzisoxazole"
+      ],
+      "psychoactiveClasses": [
+        "Antipsychotic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "rolicyclidine",
+      "name": "Rolicyclidine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Rolicyclidine",
+      "chemicalClasses": [
+        "Arylcyclohexylamines"
+      ],
+      "psychoactiveClasses": [
+        "Dissociatives"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral",
+        "smoked"
+      ]
+    },
+    {
+      "id": "salvia-divinorum",
+      "name": "Salvia divinorum",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Salvia%20divinorum",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "salvinorin-a",
+      "name": "Salvinorin A",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Salvinorin%20A",
+      "chemicalClasses": [
+        "Salvinorin",
+        "Terpenoid"
+      ],
+      "psychoactiveClasses": [
+        "Hallucinogens"
+      ],
+      "reportedRoutes": [
+        "smoked",
+        "sublingual"
+      ]
+    },
+    {
+      "id": "salvinorin-b-methoxymethyl-ether",
+      "name": "Salvinorin B methoxymethyl ether",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Salvinorin%20B%20methoxymethyl%20ether",
+      "chemicalClasses": [
+        "Salvinorin"
+      ],
+      "psychoactiveClasses": [
+        "Hallucinogens"
+      ],
+      "reportedRoutes": []
+    },
+    {
+      "id": "sam-e",
+      "name": "SAM-e",
+      "sourceUrl": "https://psychonautwiki.org/wiki/SAM-e",
+      "chemicalClasses": [
+        "Nitrogenous organic acid"
+      ],
+      "psychoactiveClasses": [
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "secobarbital",
+      "name": "Secobarbital",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Secobarbital",
+      "chemicalClasses": [
+        "Barbiturates"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "sedative",
+      "name": "Sedative",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Sedative",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "selective-serotonin-reuptake-inhibitor",
+      "name": "Selective serotonin reuptake inhibitor",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Selective%20serotonin%20reuptake%20inhibitor",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "serotonergic-psychedelic",
+      "name": "Serotonergic psychedelic",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Serotonergic%20psychedelic",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "serotonin",
+      "name": "Serotonin",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Serotonin",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "serotonin-norepinephrine-reuptake-inhibitor",
+      "name": "Serotonin-norepinephrine reuptake inhibitor",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Serotonin-norepinephrine%20reuptake%20inhibitor",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "stimulants",
+      "name": "Stimulants",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Stimulants",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "sts-135",
+      "name": "STS-135",
+      "sourceUrl": "https://psychonautwiki.org/wiki/STS-135",
+      "chemicalClasses": [
+        "Indolecarboxamide",
+        "Adamantanes"
+      ],
+      "psychoactiveClasses": [
+        "Cannabinoid"
+      ],
+      "reportedRoutes": [
+        "smoked"
+      ]
+    },
+    {
+      "id": "substituted-aminorexes",
+      "name": "Substituted aminorexes",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Substituted%20aminorexes",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "substituted-amphetamines",
+      "name": "Substituted amphetamines",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Substituted%20amphetamines",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "substituted-cathinones",
+      "name": "Substituted cathinones",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Substituted%20cathinones",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "substituted-morphinans",
+      "name": "Substituted morphinans",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Substituted%20morphinans",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "substituted-phenethylamines",
+      "name": "Substituted phenethylamines",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Substituted%20phenethylamines",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "substituted-phenidates",
+      "name": "Substituted phenidates",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Substituted%20phenidates",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "substituted-tryptamines",
+      "name": "Substituted tryptamines",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Substituted%20tryptamines",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "sufentanil",
+      "name": "Sufentanil",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Sufentanil",
+      "chemicalClasses": [
+        "Anilidopiperidine"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "intravenous"
+      ]
+    },
+    {
+      "id": "synthetic-cannabinoid",
+      "name": "Synthetic cannabinoid",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Synthetic%20cannabinoid",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "tabernanthe-iboga-botany",
+      "name": "Tabernanthe iboga (botany)",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Tabernanthe%20iboga%20%28botany%29",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "tapentadol",
+      "name": "Tapentadol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Tapentadol",
+      "chemicalClasses": [
+        "Phenylpropylamine"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "temazepam",
+      "name": "Temazepam",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Temazepam",
+      "chemicalClasses": [
+        "Benzodiazepines"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "tetrahydrocannabihexol",
+      "name": "Tetrahydrocannabihexol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Tetrahydrocannabihexol",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "tetrahydrocannabinol",
+      "name": "Tetrahydrocannabinol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Tetrahydrocannabinol",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "tetrahydrocannabiphorol",
+      "name": "Tetrahydrocannabiphorol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Tetrahydrocannabiphorol",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "tetrahydrocannabutol",
+      "name": "Tetrahydrocannabutol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Tetrahydrocannabutol",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "theacrine",
+      "name": "Theacrine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Theacrine",
+      "chemicalClasses": [
+        "Xanthines",
+        "Purine alkaloid"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants",
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "insufflated",
+        "oral"
+      ]
+    },
+    {
+      "id": "theanine",
+      "name": "Theanine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Theanine",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [
+        "Nootropic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "thienodiazepines",
+      "name": "Thienodiazepines",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Thienodiazepines",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "thj-018",
+      "name": "THJ-018",
+      "sourceUrl": "https://psychonautwiki.org/wiki/THJ-018",
+      "chemicalClasses": [
+        "Naphthoylindazole"
+      ],
+      "psychoactiveClasses": [
+        "Cannabinoid"
+      ],
+      "reportedRoutes": [
+        "smoked"
+      ]
+    },
+    {
+      "id": "thj-2201",
+      "name": "THJ-2201",
+      "sourceUrl": "https://psychonautwiki.org/wiki/THJ-2201",
+      "chemicalClasses": [
+        "Naphthoylindazole"
+      ],
+      "psychoactiveClasses": [
+        "Cannabinoid"
+      ],
+      "reportedRoutes": [
+        "smoked"
+      ]
+    },
+    {
+      "id": "tianeptine",
+      "name": "Tianeptine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Tianeptine",
+      "chemicalClasses": [
+        "Dibenzothiazepine",
+        "Antidepressants"
+      ],
+      "psychoactiveClasses": [
+        "Nootropic",
+        "Opioids",
+        "Antidepressants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "tizanidine",
+      "name": "Tizanidine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Tizanidine",
+      "chemicalClasses": [
+        "Imidazoline",
+        "Arylaminoimidazoline"
+      ],
+      "psychoactiveClasses": [
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "tma-2",
+      "name": "TMA-2",
+      "sourceUrl": "https://psychonautwiki.org/wiki/TMA-2",
+      "chemicalClasses": [
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "tma-6",
+      "name": "TMA-6",
+      "sourceUrl": "https://psychonautwiki.org/wiki/TMA-6",
+      "chemicalClasses": [
+        "Amphetamine",
+        "Substituted amphetamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic",
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "tramadol",
+      "name": "Tramadol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Tramadol",
+      "chemicalClasses": [
+        "Phenylpropylamine"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "trihexyphenidyl",
+      "name": "Trihexyphenidyl",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Trihexyphenidyl",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "tryptamine-compound",
+      "name": "Tryptamine (compound)",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Tryptamine%20%28compound%29",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "tyrosine",
+      "name": "Tyrosine",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Tyrosine",
+      "chemicalClasses": [
+        "Substituted phenethylamines",
+        "Amino acid"
+      ],
+      "psychoactiveClasses": [
+        "Stimulants"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "u-47700",
+      "name": "U-47700",
+      "sourceUrl": "https://psychonautwiki.org/wiki/U-47700",
+      "chemicalClasses": [
+        "Benzamide"
+      ],
+      "psychoactiveClasses": [
+        "Opioids"
+      ],
+      "reportedRoutes": [
+        "insufflated"
+      ]
+    },
+    {
+      "id": "xanthines",
+      "name": "Xanthines",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Xanthines",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "zolpidem",
+      "name": "Zolpidem",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Zolpidem",
+      "chemicalClasses": [
+        "Imidazopyridine"
+      ],
+      "psychoactiveClasses": [
+        "Hallucinogens",
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "zopiclone",
+      "name": "Zopiclone",
+      "sourceUrl": "https://psychonautwiki.org/wiki/Zopiclone",
+      "chemicalClasses": [
+        "Cyclopyrrolone"
+      ],
+      "psychoactiveClasses": [
+        "Hallucinogens",
+        "Depressant"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "mt",
+      "name": "ΑMT",
+      "sourceUrl": "https://psychonautwiki.org/wiki/%CE%91MT",
+      "chemicalClasses": [
+        "Substituted tryptamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic",
+        "Entactogen"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "k-2c-b",
+      "name": "Βk-2C-B",
+      "sourceUrl": "https://psychonautwiki.org/wiki/%CE%92k-2C-B",
+      "chemicalClasses": [
+        "Substituted phenethylamines"
+      ],
+      "psychoactiveClasses": [
+        "Psychedelic"
+      ],
+      "reportedRoutes": [
+        "oral"
+      ]
+    },
+    {
+      "id": "10-tetrahydrocannabinol",
+      "name": "Δ-10-Tetrahydrocannabinol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/%CE%94-10-Tetrahydrocannabinol",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "11-tetrahydrocannabinol",
+      "name": "Δ-11-Tetrahydrocannabinol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/%CE%94-11-Tetrahydrocannabinol",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    },
+    {
+      "id": "8-tetrahydrocannabinol",
+      "name": "Δ-8-Tetrahydrocannabinol",
+      "sourceUrl": "https://psychonautwiki.org/wiki/%CE%94-8-Tetrahydrocannabinol",
+      "chemicalClasses": [],
+      "psychoactiveClasses": [],
+      "reportedRoutes": []
+    }
+  ]
+}

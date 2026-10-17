@@ -1,327 +1,138 @@
-import { SubstanceEncyclopedia } from './components/SubstanceEncyclopedia';
-import { SubstanceLexicon } from './components/SubstanceLexicon';
-import React, { useState } from 'react';
-import { 
-  calculateAddictionImpact, 
-  UserInputs, 
-  ROA, 
-  SpeedballFreq, 
-  UsagePattern, 
-  BiologicalSex 
-} from './math/calculatorEngine';
-import { ConnectomeCanvas } from './components/ConnectomeCanvas';
-import { Activity, Brain, ShieldCheck, Flame, HeartPulse, Users, CheckSquare, Square } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { ArrowDownRight, ArrowUpRight, BookOpen, Check, CircleHelp, Info, LockKeyhole, ShieldAlert } from 'lucide-react';
+import { EmergencyPanel } from './components/EmergencyPanel';
+import { InteractionChecker } from './components/InteractionChecker';
+import { SourceNotes } from './components/SourceNotes';
+import { SubstanceDirectory } from './components/SubstanceDirectory';
+import substanceIndex from './data/substances.json';
+import type { SubstanceDataset, SubstanceRecord } from './types/substance';
+
+const dataset = substanceIndex as SubstanceDataset;
+
+const navigation = [
+  { href: '#overview', label: 'Overview', number: '00' },
+  { href: '#emergency', label: 'Immediate help', number: '01' },
+  { href: '#checker', label: 'Interaction context', number: '02' },
+  { href: '#directory', label: 'Substance index', number: '03' },
+  { href: '#sources', label: 'Sources & limits', number: '05' },
+];
 
 export default function App() {
-  const [inputs, setInputs] = useState<UserInputs>({
-    chronologicalAge: 28,
-    onsetAge: 20,
-    yearsOfUse: 3.0,
-    dailyGrams: 0.3,
-    roas: ['smoke'],
-    speedball: 'none',
-    usagePattern: 'chronic',
-    biologicalSex: 'male',
-    concomitantAlcohol: false,
-    concomitantOpioids: false,
-    abstinenceMonths: 6,
-    aerobicExercise: true,
-    sleepOptimization: true,
-  });
+  const [selectedIds, setSelectedIds] = useState<string[]>([]);
+  const selectedRecords = useMemo(
+    () => dataset.records.filter((record) => selectedIds.includes(record.id)),
+    [selectedIds],
+  );
 
-  const results = calculateAddictionImpact(inputs);
-
-  const updateInput = <K extends keyof UserInputs>(key: K, value: UserInputs[K]) => {
-    setInputs((prev) => ({ ...prev, [key]: value }));
-  };
-
-  const toggleRoa = (roa: ROA) => {
-    setInputs((prev) => {
-      const exists = prev.roas.includes(roa);
-      let updatedRoas: ROA[];
-      if (exists) {
-        // Keep at least one or allow empty (engine defaults gracefully)
-        updatedRoas = prev.roas.filter((r) => r !== roa);
-      } else {
-        updatedRoas = [...prev.roas, roa];
-      }
-      return { ...prev, roas: updatedRoas };
-    });
+  const toggleSelected = (record: SubstanceRecord) => {
+    setSelectedIds((current) => current.includes(record.id)
+      ? current.filter((id) => id !== record.id)
+      : [...current, record.id]);
   };
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans p-4 max-w-4xl mx-auto pb-12">
-      <header className="border-b border-zinc-800 pb-3 mb-5">
-        <div className="flex items-center gap-2 text-rose-500 mb-0.5">
-          <Activity className="w-4 h-4" />
-          <span className="text-[11px] font-mono uppercase tracking-widest">Precision Clinical Tool v2.2</span>
+    <div className="site-shell">
+      <a className="skip-link" href="#main-content">Skip to main content</a>
+
+      <header className="topbar">
+        <a className="brand" href="#overview" aria-label="Substance Field Guide home">
+          <img src="/fieldnotes-mark.svg" width="36" height="36" alt="" />
+          <span className="brand-wordmark">SUBSTANCE<span>FIELD GUIDE</span></span>
+        </a>
+        <div className="topbar-meta">
+          <span className="edition-label">A public-health reference</span>
+          <span className="privacy-status"><LockKeyhole size={14} aria-hidden="true" /> No account · no saved selections</span>
         </div>
-        <h1 className="text-xl font-bold tracking-tight">Addiction Biological Impact Calculator</h1>
-        <p className="text-xs text-zinc-400 mt-0.5">
-          Advanced neuroimaging regression modeling with multi-ROA compounding, privacy imputation, and recovery curves.
-        </p>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {/* Left Column: Expanded Telemetry Inputs */}
-        <div className="space-y-4 bg-zinc-900/60 p-4 rounded-xl border border-zinc-800">
-          <h2 className="text-xs font-mono uppercase text-zinc-400 tracking-wider flex items-center gap-2">
-            <Flame className="w-3.5 h-3.5 text-amber-500" /> Usage Telemetry & Demographics
-          </h2>
+      <div className="safety-ribbon" role="note">
+        <span><ShieldAlert size={17} aria-hidden="true" /><strong>Possible medical emergency?</strong> Call your local emergency number.</span>
+        <a href="#emergency">Signs and what to do <ArrowUpRight size={14} aria-hidden="true" /></a>
+      </div>
 
-          <div className="grid grid-cols-2 gap-3">
-            <div>
-              <label className="text-xs text-zinc-400 block mb-1">Current Age</label>
-              <input
-                type="number"
-                value={inputs.chronologicalAge}
-                onChange={(e) => updateInput('chronologicalAge', Number(e.target.value))}
-                className="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-3 py-1.5 text-sm font-mono text-zinc-200"
-              />
-            </div>
-            <div>
-              <label className="text-xs text-zinc-400 block mb-1">Onset Age</label>
-              <input
-                type="number"
-                value={inputs.onsetAge}
-                onChange={(e) => updateInput('onsetAge', Number(e.target.value))}
-                className="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-3 py-1.5 text-sm font-mono text-zinc-200"
-              />
-            </div>
+      <div className="page-layout">
+        <nav className="section-nav" aria-label="Page sections">
+          <div className="nav-caption">IN THIS GUIDE</div>
+          {navigation.map((item) => (
+            <a className="nav-link" key={item.href} href={item.href}>
+              <span className="nav-number">{item.number}</span>{item.label}
+            </a>
+          ))}
+          <div className="nav-note">
+            <LockKeyhole size={15} aria-hidden="true" />
+            <p>Your selections stay in this browser tab. They are not stored in an account or sent to a server.</p>
           </div>
+          <div className="nav-source-count"><BookOpen size={15} aria-hidden="true" /><span>{dataset.recordCount} index records<br />Snapshot · {new Intl.DateTimeFormat(undefined, { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(dataset.retrievedAt))}</span></div>
+        </nav>
 
-          <div className="grid grid-cols-2 gap-3">
-            <div>
-              <label className="text-xs text-zinc-400 block mb-1">Duration (Years)</label>
-              <input
-                type="number"
-                step="0.1"
-                value={inputs.yearsOfUse}
-                onChange={(e) => updateInput('yearsOfUse', Number(e.target.value))}
-                className="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-3 py-1.5 text-sm font-mono text-zinc-200"
-              />
-            </div>
-            <div>
-              <label className="text-xs text-zinc-400 block mb-1">Daily Use (Grams)</label>
-              <input
-                type="number"
-                step="0.05"
-                value={inputs.dailyGrams}
-                onChange={(e) => updateInput('dailyGrams', Number(e.target.value))}
-                className="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-3 py-1.5 text-sm font-mono text-zinc-200"
-              />
-            </div>
-          </div>
+        <main id="main-content" className="main-content">
+          <EmergencyPanel />
 
-          {/* Biological Sex with Privacy Option */}
-          <div>
-            <label className="text-xs text-zinc-400 block mb-1.5 flex items-center gap-1">
-              <Users className="w-3 h-3 text-purple-400" /> Biological Sex
-            </label>
-            <div className="grid grid-cols-3 gap-1.5">
-              {(['male', 'female', 'prefer_not_to_say'] as BiologicalSex[]).map((sex) => (
-                <button
-                  key={sex}
-                  onClick={() => updateInput('biologicalSex', sex)}
-                  className={`py-1.5 text-[11px] font-mono rounded-lg border capitalize transition-all ${
-                    inputs.biologicalSex === sex
-                      ? 'bg-purple-950/60 border-purple-500 text-purple-300'
-                      : 'bg-zinc-950 border-zinc-800 text-zinc-400'
-                  }`}
-                >
-                  {sex === 'prefer_not_to_say' ? 'Prefer Not to Answer' : sex}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Usage Pattern with Privacy Option */}
-          <div>
-            <label className="text-xs text-zinc-400 block mb-1.5">Usage Pattern</label>
-            <div className="grid grid-cols-3 gap-1.5">
-              {(['chronic', 'binge', 'prefer_not_to_say'] as UsagePattern[]).map((pat) => (
-                <button
-                  key={pat}
-                  onClick={() => updateInput('usagePattern', pat)}
-                  className={`py-1.5 text-[11px] font-mono rounded-lg border capitalize transition-all ${
-                    inputs.usagePattern === pat
-                      ? 'bg-amber-950/60 border-amber-500 text-amber-300'
-                      : 'bg-zinc-950 border-zinc-800 text-zinc-400'
-                  }`}
-                >
-                  {pat === 'prefer_not_to_say' ? 'Prefer Not to Answer' : pat}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Multi-Select ROAs (including rectal) */}
-          <div>
-            <div className="flex justify-between items-center mb-1.5">
-              <label className="text-xs text-zinc-400">Route of Administration (Select Multiple)</label>
-              <span className="text-[10px] font-mono text-rose-400">{inputs.roas.length} selected</span>
-            </div>
-            <div className="grid grid-cols-3 gap-1.5">
-              {(['oral', 'snort', 'smoke', 'rectal', 'iv'] as ROA[]).map((r) => {
-                const selected = inputs.roas.includes(r);
-                return (
-                  <button
-                    key={r}
-                    onClick={() => toggleRoa(r)}
-                    className={`py-1.5 px-2 text-xs font-mono rounded-lg border capitalize flex items-center justify-center gap-1.5 transition-all ${
-                      selected
-                        ? 'bg-rose-950/60 border-rose-500 text-rose-300'
-                        : 'bg-zinc-950 border-zinc-800 text-zinc-400'
-                    }`}
-                  >
-                    {selected ? <CheckSquare className="w-3.5 h-3.5" /> : <Square className="w-3.5 h-3.5" />}
-                    {r}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Speedball Co-Use with Privacy Option */}
-          <div>
-            <label className="text-xs text-zinc-400 block mb-1.5">Speedball Co-Use Frequency</label>
-            <div className="grid grid-cols-2 gap-1.5">
-              {(['none', 'occasional', 'chronic', 'prefer_not_to_say'] as SpeedballFreq[]).map((s) => (
-                <button
-                  key={s}
-                  onClick={() => updateInput('speedball', s)}
-                  className={`py-1.5 text-[11px] font-mono rounded-lg border capitalize transition-all ${
-                    inputs.speedball === s
-                      ? 'bg-amber-950/60 border-amber-500 text-amber-300'
-                      : 'bg-zinc-950 border-zinc-800 text-zinc-400'
-                  }`}
-                >
-                  {s === 'prefer_not_to_say' ? 'Prefer Not to Answer' : s}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Polydrug Concomitant Factors */}
-          <div className="pt-2 border-t border-zinc-800 space-y-2">
-            <label className="text-xs text-zinc-400 block uppercase tracking-wider font-mono">
-              Polydrug Concomitant Factors
-            </label>
-            <div className="flex gap-4">
-              <label className="flex items-center gap-2 text-xs text-zinc-300 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={inputs.concomitantAlcohol}
-                  onChange={(e) => updateInput('concomitantAlcohol', e.target.checked)}
-                  className="accent-rose-500"
-                />
-                Concomitant Alcohol Use
-              </label>
-              <label className="flex items-center gap-2 text-xs text-zinc-300 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={inputs.concomitantOpioids}
-                  onChange={(e) => updateInput('concomitantOpioids', e.target.checked)}
-                  className="accent-rose-500"
-                />
-                Opioid Co-Involvement
-              </label>
-            </div>
-          </div>
-
-          <div className="pt-2 border-t border-zinc-800 space-y-3">
-            <h2 className="text-xs font-mono uppercase text-emerald-400 tracking-wider flex items-center gap-2">
-              <ShieldCheck className="w-3.5 h-3.5" /> Recovery & Rehabilitation
-            </h2>
-            <div>
-              <div className="flex justify-between text-xs mb-1">
-                <span className="text-zinc-400">Abstinence Duration</span>
-                <span className="font-mono text-emerald-400">{inputs.abstinenceMonths} Months</span>
-              </div>
-              <input
-                type="range"
-                min="0"
-                max="36"
-                value={inputs.abstinenceMonths}
-                onChange={(e) => updateInput('abstinenceMonths', Number(e.target.value))}
-                className="w-full accent-emerald-500"
-              />
-            </div>
-
-            <div className="flex gap-4">
-              <label className="flex items-center gap-2 text-xs text-zinc-300 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={inputs.aerobicExercise}
-                  onChange={(e) => updateInput('aerobicExercise', e.target.checked)}
-                  className="accent-emerald-500"
-                />
-                Cardio / BDNF Therapy
-              </label>
-              <label className="flex items-center gap-2 text-xs text-zinc-300 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={inputs.sleepOptimization}
-                  onChange={(e) => updateInput('sleepOptimization', e.target.checked)}
-                  className="accent-emerald-500"
-                />
-                Sleep Architecture
-              </label>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Column: Visualization & Clinical Readouts */}
-        <div className="space-y-4 flex flex-col justify-between">
-          <ConnectomeCanvas padScore={results.finalPAD} />
-
-          <div className="grid grid-cols-2 gap-3">
-            <div className="bg-zinc-900 border border-zinc-800 p-3 rounded-xl">
-              <div className="flex items-center gap-1.5 text-xs text-zinc-400 mb-1">
-                <Brain className="w-3.5 h-3.5 text-purple-400" />
-                Brain Biological Age
-              </div>
-              <div className="text-2xl font-mono font-bold text-purple-300">
-                {results.biologicalBrainAge.toFixed(1)} <span className="text-xs text-zinc-500">yrs</span>
-              </div>
-              <div className="text-[11px] font-mono text-purple-400 mt-0.5">
-                +{results.finalPAD.toFixed(2)} yrs PAD gap
+          <section className="hero-section" id="overview">
+            <div className="hero-copy">
+              <div className="eyebrow"><span className="eyebrow-line" /> SAFETY INFORMATION · EVIDENCE FIRST</div>
+              <h1>Clear information.<br /><em>No false precision.</em></h1>
+              <p className="hero-lede">A searchable substance reference and a focused interaction checker—built to show what a source says, and where the evidence stops.</p>
+              <div className="hero-actions">
+                <a className="button-primary" href="#directory">Browse the index <ArrowDownRight size={16} aria-hidden="true" /></a>
+                <a className="button-secondary" href="#checker">Check selected substances <ArrowUpRight size={15} aria-hidden="true" /></a>
               </div>
             </div>
+            <aside className="hero-note" aria-label="Evidence principle">
+              <div className="hero-note-top"><span>FIELD NOTE</span><span>NO. 001</span></div>
+              <div className="hero-note-mark"><span /> <span /> <span /></div>
+              <p>Population research is not a personal measurement.</p>
+              <div className="hero-note-bottom"><span>UNCERTAINTY</span><strong>MAKE IT VISIBLE</strong></div>
+            </aside>
+          </section>
 
-            <div className="bg-zinc-900 border border-zinc-800 p-3 rounded-xl">
-              <div className="flex items-center gap-1.5 text-xs text-zinc-400 mb-1">
-                <HeartPulse className="w-3.5 h-3.5 text-rose-400" />
-                Lifespan Impact (YLL)
-              </div>
-              <div className="text-2xl font-mono font-bold text-rose-400">
-                -{results.estimatedYearsLifeLost.toFixed(1)} <span className="text-xs text-zinc-500">yrs</span>
-              </div>
-              <div className="text-[11px] font-mono text-zinc-400 mt-0.5">
-                Proj: {results.projectedLifespan.toFixed(1)} yrs
-              </div>
-            </div>
+          <div className="measure-strip" aria-label="How this reference works">
+            <div><strong>{dataset.recordCount}</strong><span>substances indexed</span></div>
+            <div><strong>02</strong><span>focused interaction rules</span></div>
+            <div><strong>0</strong><span>personal scores or forecasts</span></div>
           </div>
 
-          <div className="bg-zinc-900/40 border border-zinc-800 p-3 rounded-xl space-y-1.5 text-xs font-mono">
-            <div className="flex justify-between text-zinc-400">
-              <span>Baseline PAD (Wen et al.):</span>
-              <span className="text-zinc-200">+{results.padBase.toFixed(2)} yrs</span>
+          <section className="checker-section" id="checker">
+            <div className="section-heading-row">
+              <div>
+                <div className="section-kicker"><span className="kicker-mark">02</span> Limited reference tool</div>
+                <h2>Check interaction context</h2>
+                <p>Select more than one substance from the index. The checker only displays a warning when its specific sources support one; everything else is unassessed.</p>
+              </div>
+              <div className="not-a-score"><Info size={15} aria-hidden="true" /> No numeric risk score</div>
             </div>
-            <div className="flex justify-between text-zinc-400">
-              <span>Composite Multiplier:</span>
-              <span className="text-amber-400">{results.compositeMultiplier.toFixed(2)}x</span>
+            <InteractionChecker selected={selectedRecords} onRemove={(id) => setSelectedIds((current) => current.filter((item) => item !== id))} onClear={() => setSelectedIds([])} />
+          </section>
+
+          <section className="library-section" id="directory">
+            <SubstanceDirectory records={dataset.records} selectedIds={selectedIds} onToggle={toggleSelected} />
+          </section>
+
+          <section className="can-cannot-section" aria-labelledby="scope-title">
+            <div className="section-kicker"><span className="kicker-mark">04</span> Scope, at a glance</div>
+            <h2 id="scope-title">Useful context, not a verdict.</h2>
+            <div className="scope-columns">
+              <article className="scope-card scope-card-positive">
+                <div className="scope-icon"><Check size={16} aria-hidden="true" /></div>
+                <h3>This guide can</h3>
+                <p>Show directory metadata, link each entry to its source, and flag a small number of interactions described by an official public-health source.</p>
+              </article>
+              <article className="scope-card scope-card-limits">
+                <div className="scope-icon"><CircleHelp size={16} aria-hidden="true" /></div>
+                <h3>This guide cannot</h3>
+                <p>Identify a safe dose or mixture, verify a substance's contents, diagnose a condition, or predict an individual's brain health, impairment, recovery, or lifespan.</p>
+              </article>
             </div>
-            <div className="flex justify-between text-zinc-400">
-              <span>Neuroplastic Recovery:</span>
-              <span className="text-emerald-400">-{results.recoveryAmount.toFixed(2)} yrs</span>
-            </div>
-            <div className="flex justify-between text-zinc-400 border-t border-zinc-800 pt-1">
-              <span>Est. DSST Cognitive Shift:</span>
-              <span className="text-purple-400">{results.dsstCognitiveShift.toFixed(1)} pts</span>
-            </div>
-          </div>
-        </div>
+          </section>
+
+          <SourceNotes dataset={dataset} />
+
+          <footer className="site-footer">
+            <a className="footer-brand" href="#overview"><img src="/fieldnotes-mark.svg" width="24" height="24" alt="" /> SUBSTANCE / FIELD GUIDE</a>
+            <span>For education only. If someone's safety is at risk, contact emergency services.</span>
+            <a href="#sources">Sources & limitations <ArrowUpRight size={13} aria-hidden="true" /></a>
+          </footer>
+        </main>
       </div>
     </div>
   );
