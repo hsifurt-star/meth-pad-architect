@@ -1,3 +1,4 @@
+import { SubstanceEncyclopedia } from './components/SubstanceEncyclopedia';
 import { SubstanceLexicon } from './components/SubstanceLexicon';
 import React, { useState } from 'react';
 import { 
