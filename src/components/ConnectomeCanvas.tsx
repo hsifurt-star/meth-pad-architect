@@ -82,7 +82,7 @@ export const ConnectomeCanvas: React.FC<CanvasProps> = ({ padScore }) => {
     <div className="relative w-full flex justify-center items-center bg-zinc-950 rounded-xl border border-zinc-800 p-2">
       <canvas ref={canvasRef} width={320} height={220} className="w-full max-w-[320px] h-[220px]" />
       <div className="absolute bottom-2 left-3 text-[10px] font-mono text-zinc-500 uppercase tracking-wider">
-        Schaefer-400 Brain Connectome Strain
+        Schaefer-400 Brain Connectome Strain Map
       </div>
     </div>
   );

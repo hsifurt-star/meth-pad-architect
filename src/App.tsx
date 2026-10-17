@@ -5,10 +5,10 @@ import { Activity, Brain, ShieldCheck, Flame, HeartPulse } from 'lucide-react';
 
 export default function App() {
   const [inputs, setInputs] = useState<UserInputs>({
-    chronologicalAge: 24,
-    onsetAge: 19,
-    yearsOfUse: 2.5,
-    dailyGrams: 0.25,
+    chronologicalAge: 28,
+    onsetAge: 20,
+    yearsOfUse: 3.0,
+    dailyGrams: 0.3,
     roa: 'smoke',
     speedball: 'none',
     abstinenceMonths: 6,
@@ -105,7 +105,7 @@ export default function App() {
           </div>
 
           <div>
-            <label className="text-xs text-zinc-400 block mb-1.5">Speedball (Meth + Opioids)</label>
+            <label className="text-xs text-zinc-400 block mb-1.5">Speedball Co-Use</label>
             <div className="grid grid-cols-3 gap-1.5">
               {(['none', 'occasional', 'chronic'] as SpeedballFreq[]).map((s) => (
                 <button
@@ -198,7 +198,7 @@ export default function App() {
 
           <div className="bg-zinc-900/40 border border-zinc-800 p-3 rounded-xl space-y-1.5 text-xs font-mono">
             <div className="flex justify-between text-zinc-400">
-              <span>Baseline PAD:</span>
+              <span>Baseline PAD (Wen et al.):</span>
               <span className="text-zinc-200">+{results.padBase.toFixed(2)} yrs</span>
             </div>
             <div className="flex justify-between text-zinc-400">
@@ -206,8 +206,12 @@ export default function App() {
               <span className="text-amber-400">{results.compositeMultiplier.toFixed(2)}x</span>
             </div>
             <div className="flex justify-between text-zinc-400">
-              <span>Recovery Credit:</span>
+              <span>Neuroplastic Recovery:</span>
               <span className="text-emerald-400">-{results.recoveryAmount.toFixed(2)} yrs</span>
+            </div>
+            <div className="flex justify-between text-zinc-400 border-t border-zinc-800 pt-1">
+              <span>Est. DSST Cognitive Shift:</span>
+              <span className="text-purple-400">{results.dsstCognitiveShift.toFixed(1)} pts</span>
             </div>
           </div>
         </div>
