@@ -97,3 +97,4 @@ export function calculateAddictionImpact(input: UserInputs): CalculationResults 
     projectedLifespan,
   };
 }
+

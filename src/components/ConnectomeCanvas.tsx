@@ -87,3 +87,4 @@ export const ConnectomeCanvas: React.FC<CanvasProps> = ({ padScore }) => {
     </div>
   );
 };
+
