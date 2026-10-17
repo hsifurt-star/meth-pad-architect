@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
-import { calculateAddictionImpact, UserInputs, ROA, SpeedballFreq } from './math/calculatorEngine';
+import { 
+  calculateAddictionImpact, 
+  UserInputs, 
+  ROA, 
+  SpeedballFreq, 
+  UsagePattern, 
+  BiologicalSex 
+} from './math/calculatorEngine';
 import { ConnectomeCanvas } from './components/ConnectomeCanvas';
-import { Activity, Brain, ShieldCheck, Flame, HeartPulse } from 'lucide-react';
+import { Activity, Brain, ShieldCheck, Flame, HeartPulse, Sliders, Users } from 'lucide-react';
 
 export default function App() {
   const [inputs, setInputs] = useState<UserInputs>({
@@ -11,6 +18,10 @@ export default function App() {
     dailyGrams: 0.3,
     roa: 'smoke',
     speedball: 'none',
+    usagePattern: 'chronic',
+    biologicalSex: 'male',
+    concomitantAlcohol: false,
+    concomitantOpioids: false,
     abstinenceMonths: 6,
     aerobicExercise: true,
     sleepOptimization: true,
@@ -23,22 +34,23 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans p-4 max-w-4xl mx-auto">
+    <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans p-4 max-w-4xl mx-auto pb-12">
       <header className="border-b border-zinc-800 pb-3 mb-5">
         <div className="flex items-center gap-2 text-rose-500 mb-0.5">
           <Activity className="w-4 h-4" />
-          <span className="text-[11px] font-mono uppercase tracking-widest">Precision Clinical Tool</span>
+          <span className="text-[11px] font-mono uppercase tracking-widest">Precision Clinical Tool v2.0</span>
         </div>
         <h1 className="text-xl font-bold tracking-tight">Addiction Biological Impact Calculator</h1>
         <p className="text-xs text-zinc-400 mt-0.5">
-          Multi-variable modeling combining brain age acceleration (PAD) and life expectancy impact (YLL).
+          Advanced neuroimaging regression modeling (Wen et al.) with polydrug compounding and neuroplastic recovery curves.
         </p>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {/* Left Column: Expanded Telemetry Inputs */}
         <div className="space-y-4 bg-zinc-900/60 p-4 rounded-xl border border-zinc-800">
           <h2 className="text-xs font-mono uppercase text-zinc-400 tracking-wider flex items-center gap-2">
-            <Flame className="w-3.5 h-3.5 text-amber-500" /> Usage Telemetry
+            <Flame className="w-3.5 h-3.5 text-amber-500" /> Usage Telemetry & Demographics
           </h2>
 
           <div className="grid grid-cols-2 gap-3">
@@ -85,6 +97,49 @@ export default function App() {
             </div>
           </div>
 
+          {/* Biological Sex & Usage Pattern */}
+          <div className="grid grid-cols-2 gap-3 pt-1">
+            <div>
+              <label className="text-xs text-zinc-400 block mb-1.5 flex items-center gap-1">
+                <Users className="w-3 h-3 text-purple-400" /> Biological Sex
+              </label>
+              <div className="grid grid-cols-2 gap-1.5">
+                {(['male', 'female'] as BiologicalSex[]).map((sex) => (
+                  <button
+                    key={sex}
+                    onClick={() => updateInput('biologicalSex', sex)}
+                    className={`py-1.5 text-xs font-mono rounded-lg border capitalize transition-all ${
+                      inputs.biologicalSex === sex
+                        ? 'bg-purple-950/60 border-purple-500 text-purple-300'
+                        : 'bg-zinc-950 border-zinc-800 text-zinc-400'
+                    }`}
+                  >
+                    {sex}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <label className="text-xs text-zinc-400 block mb-1.5">Usage Pattern</label>
+              <div className="grid grid-cols-2 gap-1.5">
+                {(['chronic', 'binge'] as UsagePattern[]).map((pat) => (
+                  <button
+                    key={pat}
+                    onClick={() => updateInput('usagePattern', pat)}
+                    className={`py-1.5 text-xs font-mono rounded-lg border capitalize transition-all ${
+                      inputs.usagePattern === pat
+                        ? 'bg-amber-950/60 border-amber-500 text-amber-300'
+                        : 'bg-zinc-950 border-zinc-800 text-zinc-400'
+                    }`}
+                  >
+                    {pat}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <div>
             <label className="text-xs text-zinc-400 block mb-1.5">Route of Administration (ROA)</label>
             <div className="grid grid-cols-4 gap-1.5">
@@ -120,6 +175,33 @@ export default function App() {
                   {s}
                 </button>
               ))}
+            </div>
+          </div>
+
+          {/* Polydrug Concomitant Factors */}
+          <div className="pt-2 border-t border-zinc-800 space-y-2">
+            <label className="text-xs text-zinc-400 block uppercase tracking-wider font-mono">
+              Polydrug Concomitant Factors
+            </label>
+            <div className="flex gap-4">
+              <label className="flex items-center gap-2 text-xs text-zinc-300 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={inputs.concomitantAlcohol}
+                  onChange={(e) => updateInput('concomitantAlcohol', e.target.checked)}
+                  className="accent-rose-500"
+                />
+                Concomitant Alcohol Use
+              </label>
+              <label className="flex items-center gap-2 text-xs text-zinc-300 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={inputs.concomitantOpioids}
+                  onChange={(e) => updateInput('concomitantOpioids', e.target.checked)}
+                  className="accent-rose-500"
+                />
+                Opioid Co-Involvement
+              </label>
             </div>
           </div>
 
@@ -165,6 +247,7 @@ export default function App() {
           </div>
         </div>
 
+        {/* Right Column: Visualization & Clinical Readouts */}
         <div className="space-y-4 flex flex-col justify-between">
           <ConnectomeCanvas padScore={results.finalPAD} />
 
